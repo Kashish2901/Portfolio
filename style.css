@@ -372,7 +372,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 80px;
+  padding-bottom: 20px;
 }
 
 .choose-title-new {
@@ -409,10 +409,10 @@ html, body {
 }
 
 .card-icon-new {
-  width: 14vw;
-  height: 14vw;
-  max-width: 180px;
-  max-height: 180px;
+  width: 13vw;
+  height: 13vw;
+  max-width: 170px;
+  max-height: 170px;
   border-radius: 4px;
   display: flex;
   align-items: center;
