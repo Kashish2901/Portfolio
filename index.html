@@ -59,85 +59,60 @@
   <div id="choose-page" class="page-hidden">
 
     <!-- Top bar -->
-    <header class="choose-topbar">
-      <div class="choose-brand">
-        <span class="choose-brand-name">KASHISH</span>
+    <header class="choose-topbar-new">
+      <div class="choose-brand-new">
+        <span class="netflix-text-logo">NETFLIX</span>
         <div class="divider-v"></div>
-        <span class="choose-brand-sub">AN ORIGINAL PORTFOLIO</span>
+        <span class="choose-brand-sub">KASHISH | AN ORIGINAL PORTFOLIO</span>
       </div>
     </header>
 
-    <!-- Portrait — right side -->
-    <div class="choose-portrait-wrap">
-      <img src="kashish2.png" alt="Kashish" class="choose-portrait" />
-      <div class="choose-portrait-vignette"></div>
-    </div>
-
     <!-- Center content -->
-    <main class="choose-content">
-      <p class="choose-eyebrow">HOW WOULD YOU LIKE TO KNOW ME?</p>
-      <h2 class="choose-title">CHOOSE YOUR EXPERIENCE</h2>
-      <p class="choose-subtitle">Every story has multiple perspectives.</p>
-
+    <main class="choose-content-new">
+      <h2 class="choose-title-new">How would you like to know me?</h2>
+      
       <!-- Profile cards -->
-      <div class="cards-row">
+      <div class="cards-row-new">
 
-        <button class="profile-card card-analyst" id="card-analyst" onclick="goToAbout('analyst')">
-          <div class="card-icon">
-            <!-- Bar chart icon -->
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4"  y="28" width="8"  height="16" rx="1" stroke="currentColor" stroke-width="2.2" fill="none"/>
-              <rect x="20" y="18" width="8"  height="26" rx="1" stroke="currentColor" stroke-width="2.2" fill="none"/>
-              <rect x="36" y="8"  width="8"  height="36" rx="1" stroke="currentColor" stroke-width="2.2" fill="none"/>
-              <polyline points="8,26 24,16 40,6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-              <circle cx="8"  cy="26" r="2" fill="currentColor"/>
-              <circle cx="24" cy="16" r="2" fill="currentColor"/>
-              <circle cx="40" cy="6"  r="2" fill="currentColor"/>
+        <button class="profile-card-new" id="card-analyst" onclick="goToAbout('analyst')">
+          <div class="card-icon-new bg-blue">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="28" cy="40" r="6.5" fill="#fff"/>
+              <circle cx="72" cy="40" r="6.5" fill="#fff"/>
+              <path d="M 28 65 Q 50 82 72 65" stroke="#fff" stroke-width="6.5" stroke-linecap="round" fill="none"/>
             </svg>
           </div>
-          <h3 class="card-title">THE ANALYST</h3>
-          <p class="card-desc">I solve problems<br/>with data.</p>
+          <h3 class="card-title-new">The Analyst</h3>
         </button>
 
-        <button class="profile-card card-creator" id="card-creator" onclick="goToAbout('creator')">
-          <div class="card-icon">
-            <!-- Lightbulb icon -->
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24 6C16.27 6 10 12.27 10 20c0 5.18 2.76 9.7 6.88 12.25V36h14.24v-3.75C35.24 29.7 38 25.18 38 20c0-7.73-6.27-14-14-14z" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
-              <path d="M17 36h14M19 40h10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="24" y1="2" x2="24" y2="5"  stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="8"  y1="8"  x2="10" y2="10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="40" y1="8"  x2="38" y2="10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="4"  y1="20" x2="7"  y2="20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="44" y1="20" x2="41" y2="20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        <button class="profile-card-new" id="card-creator" onclick="goToAbout('creator')">
+          <div class="card-icon-new bg-red">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="28" cy="40" r="6.5" fill="#fff"/>
+              <circle cx="72" cy="40" r="6.5" fill="#fff"/>
+              <path d="M 28 65 Q 50 82 72 65" stroke="#fff" stroke-width="6.5" stroke-linecap="round" fill="none"/>
             </svg>
           </div>
-          <h3 class="card-title">THE CREATOR</h3>
-          <p class="card-desc">I love ideas that<br/>people remember.</p>
+          <h3 class="card-title-new">The Creator</h3>
         </button>
 
-        <button class="profile-card card-human" id="card-human" onclick="goToAbout('human')">
-          <div class="card-icon">
-            <!-- Heart icon -->
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24 40S6 28 6 16.5A9.5 9.5 0 0 1 24 12a9.5 9.5 0 0 1 18 4.5C42 28 24 40 24 40z" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linejoin="round"/>
+        <button class="profile-card-new" id="card-human" onclick="goToAbout('human')">
+          <div class="card-icon-new bg-yellow">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="28" cy="40" r="6.5" fill="#fff"/>
+              <circle cx="72" cy="40" r="6.5" fill="#fff"/>
+              <path d="M 28 65 Q 50 82 72 65" stroke="#fff" stroke-width="6.5" stroke-linecap="round" fill="none"/>
             </svg>
           </div>
-          <h3 class="card-title">THE HUMAN</h3>
-          <p class="card-desc">Behind every skill<br/>is a person.</p>
+          <h3 class="card-title-new">The Human</h3>
         </button>
 
       </div>
-
-      <!-- Manage profiles -->
-      <button class="manage-btn" onclick="goToAbout('all')">MANAGE PROFILES</button>
     </main>
 
     <!-- Bottom bar -->
-    <footer class="choose-footer">
-      <div class="netflix-logo-sm"><img src="netflix-logo.png" alt="Netflix" /></div>
-      <div class="divider-v"></div>
-      <span class="choose-footer-text">THIS IS JUST THE BEGINNING.</span>
+    <footer class="choose-footer-new">
+      <span class="choose-footer-text">CHOOSE A PERSPECTIVE TO BEGIN</span>
     </footer>
 
   </div>

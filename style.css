@@ -332,72 +332,39 @@ html, body {
 }
 
 /* ─── Choose Top Bar ─── */
-.choose-topbar {
+.choose-topbar-new {
   position: relative;
   z-index: 10;
-  padding: 26px 44px;
-}
-
-.choose-brand {
+  padding: 30px 50px;
   display: flex;
   align-items: center;
-  gap: 14px;
 }
 
-.choose-brand-name {
+.choose-brand-new {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.netflix-text-logo {
   font-family: var(--font-display);
-  font-size: 28px;
-  letter-spacing: 0.12em;
+  font-size: 32px;
+  letter-spacing: 0.05em;
   color: var(--red);
+  line-height: 1;
 }
 
 .choose-brand-sub {
   font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 300;
-  letter-spacing: 0.22em;
-  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.9);
   text-transform: uppercase;
 }
 
-/* ─── Choose Portrait ─── */
-.choose-portrait-wrap {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 38%;
-  height: 100%;
-  z-index: 1;
-  background: #000;
-}
-
-.choose-portrait {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-  position: relative;
-  z-index: 1;
-  filter: brightness(0.75);
-}
-
-.choose-portrait-vignette {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    #000000 0%,
-    rgba(0,0,0,0.88) 10%,
-    rgba(0,0,0,0.55) 28%,
-    rgba(0,0,0,0.1)  55%,
-    rgba(0,0,0,0)    100%
-  );
-  z-index: 2;
-}
-
 /* ─── Choose Main Content ─── */
-.choose-content {
+.choose-content-new {
   position: relative;
   z-index: 5;
   flex: 1;
@@ -405,172 +372,102 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 4% 0 4%;
+  padding-bottom: 80px;
+}
+
+.choose-title-new {
+  font-family: var(--font-body);
+  font-size: 3vw;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 40px;
   text-align: center;
-  width: 66%;
-  gap: 10px;
-}
-
-.choose-eyebrow {
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.28em;
-  color: var(--red);
-  text-transform: uppercase;
-}
-
-.choose-title {
-  font-family: var(--font-display);
-  font-size: clamp(44px, 6.5vw, 86px);
-  letter-spacing: 0.06em;
-  color: var(--white);
-  line-height: 1;
-  margin: 4px 0;
-}
-
-.choose-subtitle {
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 300;
-  color: rgba(255,255,255,0.55);
-  letter-spacing: 0.04em;
-  margin-bottom: 12px;
 }
 
 /* ─── Cards ─── */
-.cards-row {
+.cards-row-new {
   display: flex;
-  gap: 18px;
+  gap: 30px;
   justify-content: center;
-  margin: 10px 0;
 }
 
-.profile-card {
+.profile-card-new {
   background: transparent;
-  border: 1.5px solid;
-  border-radius: 6px;
-  padding: 28px 24px 22px;
-  width: 180px;
+  border: none;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  gap: 16px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.8;
+}
+
+.profile-card-new:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.card-icon-new {
+  width: 14vw;
+  height: 14vw;
+  max-width: 180px;
+  max-height: 180px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  transition: box-shadow 0.2s ease, border 0.2s ease;
+  border: 3px solid transparent;
+}
+
+.profile-card-new:hover .card-icon-new {
+  border-color: #fff;
+}
+
+.card-icon-new svg {
+  width: 80%;
+  height: 80%;
+}
+
+.bg-blue {
+  background: linear-gradient(135deg, #094eb8, #0078ff);
+}
+
+.bg-red {
+  background: linear-gradient(135deg, #a30000, #e50914);
+}
+
+.bg-yellow {
+  background: linear-gradient(135deg, #b08a00, #ffc700);
+}
+
+.card-title-new {
   font-family: var(--font-body);
-}
-
-.profile-card:hover {
-  transform: translateY(-6px) scale(1.03);
-}
-
-/* Analyst — Blue */
-.card-analyst {
-  border-color: #4A90D9;
-  color: #4A90D9;
-}
-.card-analyst:hover {
-  background: rgba(74,144,217,0.08);
-  box-shadow: 0 8px 30px rgba(74,144,217,0.2);
-}
-
-/* Creator — Red */
-.card-creator {
-  border-color: var(--red);
-  color: var(--red);
-}
-.card-creator:hover {
-  background: rgba(229,9,20,0.08);
-  box-shadow: 0 8px 30px rgba(229,9,20,0.2);
-}
-
-/* Human — Gold */
-.card-human {
-  border-color: #D4A017;
-  color: #D4A017;
-}
-.card-human:hover {
-  background: rgba(212,160,23,0.08);
-  box-shadow: 0 8px 30px rgba(212,160,23,0.2);
-}
-
-.card-icon {
-  width: 46px;
-  height: 46px;
-}
-
-.card-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.card-title {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-.card-desc {
-  font-size: 12.5px;
-  font-weight: 300;
-  color: rgba(255,255,255,0.7);
-  line-height: 1.55;
+  font-size: 1.3vw;
+  font-weight: 400;
+  color: #fff;
   text-align: center;
 }
 
-/* ─── Manage Profiles btn ─── */
-.manage-btn {
-  margin-top: 6px;
-  padding: 11px 32px;
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.35);
-  color: rgba(255,255,255,0.65);
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  cursor: pointer;
-  border-radius: 3px;
-  transition: border-color 0.25s, color 0.25s, background 0.25s;
-}
-
-.manage-btn:hover {
-  border-color: rgba(255,255,255,0.7);
-  color: #fff;
-  background: rgba(255,255,255,0.06);
-}
-
 /* ─── Choose Footer ─── */
-.choose-footer {
-  position: relative;
-  z-index: 10;
+.choose-footer-new {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 18px 44px;
-  border-top: 1px solid rgba(255,255,255,0.07);
-}
-
-.netflix-logo-sm {
-  width: 26px;
-  height: auto;
-}
-
-.netflix-logo-sm img {
-  width: 100%;
-  height: auto;
-  display: block;
+  justify-content: center;
+  padding: 30px;
 }
 
 .choose-footer-text {
   font-family: var(--font-body);
-  font-size: 10px;
-  font-weight: 300;
-  letter-spacing: 0.22em;
-  color: rgba(255,255,255,0.35);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  color: rgba(255,255,255,0.6);
   text-transform: uppercase;
 }
 
