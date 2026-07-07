@@ -566,7 +566,6 @@ html, body {
   flex-direction: column;
   justify-content: flex-end;
   padding: 60px 50px;
-  border-bottom: 2px solid #842bf7;
 }
 
 .human-hero-bg {
@@ -682,41 +681,7 @@ html, body {
   background: rgba(100,100,100,0.8);
 }
 
-.hero-controls {
-  position: absolute;
-  bottom: 60px;
-  right: 50px;
-  z-index: 5;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  color: #fff;
-}
 
-.volume-icon, .pause-icon {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.volume-bar {
-  width: 40px;
-  height: 3px;
-  background: rgba(255,255,255,0.4);
-  border-radius: 2px;
-  position: relative;
-}
-
-.volume-bar::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 50%;
-  background: var(--red);
-  border-radius: 2px;
-}
 
 /* Sections */
 .human-section {
