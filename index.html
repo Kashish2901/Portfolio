@@ -119,41 +119,98 @@
   <!-- ══════════════════ END CHOOSE PAGE ══════════════════ -->
 
 
-  <!-- ══════════════════ ABOUT PAGE ══════════════════ -->
+  <!-- ══════════════════ THE HUMAN PAGE ══════════════════ -->
   <div id="about-page" class="page-hidden">
-    <header class="about-header">
-      <div class="choose-brand">
-        <div class="netflix-logo small"><img src="netflix-logo.png" alt="Netflix" /></div>
-        <div class="divider-v"></div>
-        <span class="choose-brand-sub">AN ORIGINAL PORTFOLIO</span>
+    
+    <!-- Navbar -->
+    <nav class="human-nav">
+      <div class="human-logo">Kashish</div>
+      <div class="human-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#analyst">The Analyst</a>
+        <a href="#creator">The Creator</a>
+        <a href="#about">About me</a>
+        <a href="#contact">Contact me</a>
       </div>
-      <nav class="about-nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+      <div class="human-nav-icons">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <img src="kashish.jpg" alt="Profile" class="nav-profile-pic" />
+      </div>
+    </nav>
 
-    <section class="about-hero" id="about">
-      <div class="about-portrait-wrap">
-        <img src="kashish.jpg" alt="Kashish" class="about-portrait" />
-        <div class="about-portrait-vignette"></div>
+    <!-- Hero Section -->
+    <section class="human-hero">
+      <div class="human-hero-bg">
+        <img src="kashish.jpg" alt="Kashish Background" />
+        <div class="hero-vignette"></div>
       </div>
-      <div class="about-text">
-        <p class="about-eyebrow">SEASON 1 · EPISODE 1</p>
-        <h2 class="about-name">KASHISH</h2>
-        <p class="about-tagline">The Making of Me</p>
-        <p class="about-bio">
-          Welcome to my story. I'm Kashish — a creator, a thinker, and a dreamer in the making. Every chapter of my life has shaped who I am, and this portfolio is a window into those chapters.
-        </p>
-        <div class="about-cta">
-          <a href="#projects" class="btn-primary">▶ &nbsp;View My Work</a>
-          <a href="#contact"  class="btn-secondary">Get In Touch</a>
+      
+      <div class="human-hero-content">
+        <p class="hero-eyebrow">HELLO, I'M</p>
+        <h1 class="hero-title">Kashish<br>The Human</h1>
+        <p class="hero-subtitle">Every person has a story.<br><b>This one is mine.</b></p>
+        
+        <div class="hero-buttons">
+          <button class="btn-play">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Scroll to begin.
+          </button>
+          <button class="btn-more">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            More About Me
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-controls">
+        <svg class="volume-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+        <div class="volume-bar"></div>
+        <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="human-section">
+      <h3 class="section-title">Featured Projects</h3>
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="project-card" style="background: linear-gradient(45deg, #1a1005, #8a4a19);">
+            <h4>100 People 100<br>Stories</h4>
+          </div>
+          <div class="project-card" style="background: linear-gradient(45deg, #110738, #7162d1);">
+            <h4>Dancer</h4>
+          </div>
+          <div class="project-card" style="background: url('kashish.jpg') center/cover;">
+            <div class="card-overlay"></div>
+            <h4>Travelo &<br>Friends</h4>
+          </div>
+          <div class="project-card" style="background: #111;">
+            <h4>My<br>story</h4>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- Some Glimpses -->
+    <section class="human-section" style="margin-bottom: 50px;">
+      <h3 class="section-title">Some Glimpses</h3>
+      <div class="carousel-container">
+        <div class="carousel-track glimpses-track">
+          <!-- Placeholder video box -->
+          <div class="glimpse-card video-placeholder">
+            <div class="play-overlay">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="glimpse-card" style="background: #222;"></div>
+          <div class="glimpse-card" style="background: #333;"></div>
+          <div class="glimpse-card" style="background: #444;"></div>
+        </div>
+      </div>
+    </section>
+
   </div>
-  <!-- ══════════════════ END ABOUT PAGE ══════════════════ -->
+  <!-- ══════════════════ END THE HUMAN PAGE ══════════════════ -->
 
   <script src="script.js"></script>
 </body>
