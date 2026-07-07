@@ -98,4 +98,27 @@
     }, 600);
   };
 
+  /* ══════════════════════════════════════════
+     VIDEO SOUND HANDLING
+     Browsers block autoplay with sound, so we start muted
+     and unmute after the user's first interaction.
+  ══════════════════════════════════════════ */
+  const heroVideo = document.querySelector('.hero-video-bg');
+  if (heroVideo) {
+    // Ensure autoplay works by starting muted
+    heroVideo.muted = true;
+    heroVideo.play().catch(() => {});
+
+    // Unmute on first user interaction anywhere on the page
+    function unmuteVideo() {
+      if (heroVideo) {
+        heroVideo.muted = false;
+      }
+      document.removeEventListener('click', unmuteVideo);
+      document.removeEventListener('touchstart', unmuteVideo);
+    }
+    document.addEventListener('click', unmuteVideo);
+    document.addEventListener('touchstart', unmuteVideo);
+  }
+
 })();
