@@ -575,11 +575,11 @@ html, body {
   z-index: 0;
 }
 
-.human-hero-bg img {
+.hero-video-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right 30%;
+  object-position: right center;
   opacity: 0.9;
 }
 
