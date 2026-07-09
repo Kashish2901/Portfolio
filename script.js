@@ -84,6 +84,7 @@
   
   let currentPageId = 'choose';
   const heroVideo = document.getElementById('hero-video');
+  const creatorVideo = document.getElementById('creator-hero-video');
 
   window.goToPage = function (persona) {
     switchProfile(persona);
@@ -105,6 +106,12 @@
     if (currentPageId === 'human' && heroVideo) {
       heroVideo.pause();
       heroVideo.muted = true;
+    }
+
+    // Pause and mute video when navigating AWAY from creator page
+    if (currentPageId === 'creator' && creatorVideo) {
+      creatorVideo.pause();
+      creatorVideo.muted = true;
     }
 
     // Animate old page out
@@ -134,6 +141,15 @@
         heroVideo.currentTime = 0;
         heroVideo.muted = false;
         heroVideo.play().catch(() => {});
+      }
+
+      // Play video ONLY when navigating TO creator page
+      if (persona === 'creator' && creatorVideo) {
+        if (!creatorVideo.getAttribute('src')) {
+          creatorVideo.setAttribute('src', 'creator-video.mp4');
+        }
+        creatorVideo.currentTime = 0;
+        creatorVideo.play().catch(() => {});
       }
 
       // Reveal new page
@@ -169,10 +185,14 @@
   /* ══════════════════════════════════════════
      VIDEO INITIALIZATION
   ══════════════════════════════════════════ */
-  // Pause and mute it initially, it will be played when Human page is opened
+  // Pause and mute videos initially, they will be played when their respective page is opened
   if (heroVideo) {
     heroVideo.pause();
     heroVideo.muted = true;
+  }
+  if (creatorVideo) {
+    creatorVideo.pause();
+    creatorVideo.muted = true;
   }
 
 })();
