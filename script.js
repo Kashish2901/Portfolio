@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════
    KASHISH PORTFOLIO — Main Script
-   Flow: Loading (0→100%) → Choose Your Experience → About
+   Flow: Loading (0→100%) → Choose Your Experience → Persona
 ═══════════════════════════════════════════════════════ */
 
 (function () {
@@ -8,7 +8,16 @@
   /* ── Page refs ── */
   const loadingScreen = document.getElementById('loading-screen');
   const choosePage    = document.getElementById('choose-page');
-  const aboutPage     = document.getElementById('about-page');
+  const analystPage   = document.getElementById('analyst-page');
+  const creatorPage   = document.getElementById('creator-page');
+  const humanPage     = document.getElementById('human-page');
+
+  const pages = {
+    analyst: analystPage,
+    creator: creatorPage,
+    human: humanPage,
+    choose: choosePage
+  };
 
   /* ── Loader refs ── */
   const fill       = document.getElementById('progress-fill');
@@ -70,55 +79,100 @@
   }
 
   /* ══════════════════════════════════════════
-     TRANSITION: Choose → About
-     Called by card onclick="goToAbout('analyst')" etc.
+     TRANSITION: Page Switching (Netflix style)
   ══════════════════════════════════════════ */
-  window.goToAbout = function (persona) {
+  
+  let currentPageId = 'choose';
+  const heroVideo = document.getElementById('hero-video');
+
+  window.goToPage = function (persona) {
+    switchProfile(persona);
+  };
+
+  window.switchProfile = function(persona) {
+    // Hide dropdown if open
+    document.querySelectorAll('.profile-dropdown').forEach(d => d.classList.remove('open'));
+    
+    if (currentPageId === persona) return; // Already on this page
+    
+    const oldPage = pages[currentPageId];
+    const newPage = pages[persona];
+
     // Store chosen persona (for future use)
     sessionStorage.setItem('persona', persona);
 
-    // Animate choose page out
-    choosePage.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    choosePage.style.opacity    = '0';
-    choosePage.style.transform  = 'scale(1.03)';
+    // Pause and mute video when navigating AWAY from human page
+    if (currentPageId === 'human' && heroVideo) {
+      heroVideo.pause();
+      heroVideo.muted = true;
+    }
+
+    // Animate old page out
+    oldPage.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    oldPage.style.opacity    = '0';
+    oldPage.style.transform  = 'scale(1.03)';
 
     setTimeout(() => {
-      choosePage.style.display = 'none';
-      document.body.style.overflow = 'auto';
+      oldPage.style.display = 'none';
+      oldPage.classList.remove('page-visible', 'page-animate');
+      
+      // Reset transform/opacity for next time it's shown
+      oldPage.style.transform = '';
+      oldPage.style.opacity = '';
 
-      // Reveal about page
-      aboutPage.classList.remove('page-hidden');
-      aboutPage.classList.add('page-visible');
+      if (persona !== 'choose') {
+        document.body.style.overflow = 'auto';
+      } else {
+        document.body.style.overflow = 'hidden';
+      }
+
+      // Play video with sound ONLY when navigating TO human page
+      if (persona === 'human' && heroVideo) {
+        if (!heroVideo.getAttribute('src')) {
+          heroVideo.setAttribute('src', 'background-video.mp4');
+        }
+        heroVideo.currentTime = 0;
+        heroVideo.muted = false;
+        heroVideo.play().catch(() => {});
+      }
+
+      // Reveal new page
+      newPage.style.display = '';
+      newPage.classList.remove('page-hidden');
+      newPage.classList.add('page-visible');
 
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-          aboutPage.classList.add('page-animate');
+          newPage.classList.add('page-animate');
         });
       });
+      
+      currentPageId = persona;
     }, 600);
   };
 
   /* ══════════════════════════════════════════
-     VIDEO SOUND HANDLING
-     Browsers block autoplay with sound, so we start muted
-     and unmute after the user's first interaction.
+     DROPDOWN LOGIC
   ══════════════════════════════════════════ */
-  const heroVideo = document.querySelector('.hero-video-bg');
-  if (heroVideo) {
-    // Ensure autoplay works by starting muted
-    heroVideo.muted = true;
-    heroVideo.play().catch(() => {});
+  window.toggleDropdown = function(imgElement) {
+    const dropdown = imgElement.nextElementSibling;
+    dropdown.classList.toggle('open');
+  };
 
-    // Unmute on first user interaction anywhere on the page
-    function unmuteVideo() {
-      if (heroVideo) {
-        heroVideo.muted = false;
-      }
-      document.removeEventListener('click', unmuteVideo);
-      document.removeEventListener('touchstart', unmuteVideo);
+  // Close dropdown if clicking outside
+  document.addEventListener('click', function(event) {
+    if (!event.target.closest('.profile-dropdown-wrap')) {
+      document.querySelectorAll('.profile-dropdown').forEach(d => d.classList.remove('open'));
     }
-    document.addEventListener('click', unmuteVideo);
-    document.addEventListener('touchstart', unmuteVideo);
+  });
+
+  /* ══════════════════════════════════════════
+     VIDEO INITIALIZATION
+  ══════════════════════════════════════════ */
+  // Pause and mute it initially, it will be played when Human page is opened
+  if (heroVideo) {
+    heroVideo.pause();
+    heroVideo.muted = true;
   }
 
 })();
