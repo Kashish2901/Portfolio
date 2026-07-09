@@ -130,9 +130,9 @@
       </div>
 
       <div class="analyst-nav-links">
-        <a href="#analyst" class="nav-tab active">THE ANALYST</a>
-        <a href="#creator" class="nav-tab" onclick="switchProfile('creator')">THE CREATOR</a>
-        <a href="#human" class="nav-tab" onclick="switchProfile('human')">THE HUMAN</a>
+        <a href="#analyst" class="nav-tab active" onclick="switchProfile('analyst'); return false;">THE ANALYST</a>
+        <a href="#creator" class="nav-tab" onclick="switchProfile('creator'); return false;">THE CREATOR</a>
+        <a href="#human" class="nav-tab" onclick="switchProfile('human'); return false;">THE HUMAN</a>
       </div>
 
       <div class="analyst-nav-right">
@@ -456,39 +456,27 @@
   <!-- ══════════════════ THE CREATOR PAGE ══════════════════ -->
   <div id="creator-page" class="persona-page page-hidden">
     
-    <nav class="persona-nav">
-      <div class="human-logo">Kashish</div>
-      <div class="human-links">
-        <a href="#" class="active">Home</a>
-        <a href="#">Design Work</a>
-        <a href="#">Content</a>
-        <a href="#">Collaborations</a>
-        <a href="#">Contact me</a>
+    <!-- Top Navbar -->
+    <nav class="analyst-top-nav">
+      <div class="analyst-brand" onclick="switchProfile('choose')">
+        <span class="analyst-logo-text">KASHISH</span>
+        <svg class="analyst-cap-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L1 18l1.71 1.71c1.31.61 2.75.97 4.29.97 5.52 0 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
       </div>
-      <div class="human-nav-icons">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <div class="profile-dropdown-wrap">
-          <img src="kashish.jpg" alt="Profile" class="nav-profile-pic" onclick="toggleDropdown(this)" />
-          <div class="profile-dropdown">
-            <div class="dropdown-item" onclick="switchProfile('analyst')">
-              <div class="dropdown-avatar bg-blue-sm"></div>
-              <span>The Analyst</span>
-            </div>
-            <div class="dropdown-item" onclick="switchProfile('creator')">
-              <div class="dropdown-avatar bg-red-sm"></div>
-              <span>The Creator</span>
-            </div>
-            <div class="dropdown-item" onclick="switchProfile('human')">
-              <div class="dropdown-avatar bg-yellow-sm"></div>
-              <span>The Human</span>
-            </div>
-            <div class="dropdown-divider"></div>
-            <div class="dropdown-item" onclick="switchProfile('choose')">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              <span>Manage Profiles</span>
-            </div>
-          </div>
-        </div>
+
+      <div class="analyst-nav-links">
+        <a href="#analyst" class="nav-tab" onclick="switchProfile('analyst'); return false;">THE ANALYST</a>
+        <a href="#creator" class="nav-tab active" onclick="switchProfile('creator'); return false;">THE CREATOR</a>
+        <a href="#human" class="nav-tab" onclick="switchProfile('human'); return false;">THE HUMAN</a>
+      </div>
+
+      <div class="analyst-nav-right">
+        <a href="#resume" class="nav-resume-link">
+          <span>RESUME</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </a>
+        <a href="#contact" class="btn-connect-red">
+          LET'S CONNECT &nbsp; &rarr;
+        </a>
       </div>
     </nav>
 
@@ -532,39 +520,27 @@
   <!-- ══════════════════ THE HUMAN PAGE ══════════════════ -->
   <div id="human-page" class="persona-page page-hidden">
     
-    <nav class="persona-nav">
-      <div class="human-logo">Kashish</div>
-      <div class="human-links">
-        <a href="#" class="active">Home</a>
-        <a href="#">The Analyst</a>
-        <a href="#">The Creator</a>
-        <a href="#">About me</a>
-        <a href="#">Contact me</a>
+    <!-- Top Navbar -->
+    <nav class="analyst-top-nav">
+      <div class="analyst-brand" onclick="switchProfile('choose')">
+        <span class="analyst-logo-text">KASHISH</span>
+        <svg class="analyst-cap-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L1 18l1.71 1.71c1.31.61 2.75.97 4.29.97 5.52 0 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
       </div>
-      <div class="human-nav-icons">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <div class="profile-dropdown-wrap">
-          <img src="kashish.jpg" alt="Profile" class="nav-profile-pic" onclick="toggleDropdown(this)" />
-          <div class="profile-dropdown">
-            <div class="dropdown-item" onclick="switchProfile('analyst')">
-              <div class="dropdown-avatar bg-blue-sm"></div>
-              <span>The Analyst</span>
-            </div>
-            <div class="dropdown-item" onclick="switchProfile('creator')">
-              <div class="dropdown-avatar bg-red-sm"></div>
-              <span>The Creator</span>
-            </div>
-            <div class="dropdown-item" onclick="switchProfile('human')">
-              <div class="dropdown-avatar bg-yellow-sm"></div>
-              <span>The Human</span>
-            </div>
-            <div class="dropdown-divider"></div>
-            <div class="dropdown-item" onclick="switchProfile('choose')">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              <span>Manage Profiles</span>
-            </div>
-          </div>
-        </div>
+
+      <div class="analyst-nav-links">
+        <a href="#analyst" class="nav-tab" onclick="switchProfile('analyst'); return false;">THE ANALYST</a>
+        <a href="#creator" class="nav-tab" onclick="switchProfile('creator'); return false;">THE CREATOR</a>
+        <a href="#human" class="nav-tab active" onclick="switchProfile('human'); return false;">THE HUMAN</a>
+      </div>
+
+      <div class="analyst-nav-right">
+        <a href="#resume" class="nav-resume-link">
+          <span>RESUME</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </a>
+        <a href="#contact" class="btn-connect-red">
+          LET'S CONNECT &nbsp; &rarr;
+        </a>
       </div>
     </nav>
 
