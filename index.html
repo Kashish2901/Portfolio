@@ -74,7 +74,7 @@
       <!-- Profile cards -->
       <div class="cards-row-new">
 
-        <button class="profile-card-new" id="card-analyst" onclick="goToAbout('analyst')">
+        <button class="profile-card-new" id="card-analyst" onclick="goToPage('analyst')">
           <div class="card-icon-new bg-blue">
             <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="28" cy="40" r="6.5" fill="#fff"/>
@@ -85,7 +85,7 @@
           <h3 class="card-title-new">The Analyst</h3>
         </button>
 
-        <button class="profile-card-new" id="card-creator" onclick="goToAbout('creator')">
+        <button class="profile-card-new" id="card-creator" onclick="goToPage('creator')">
           <div class="card-icon-new bg-red">
             <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="28" cy="40" r="6.5" fill="#fff"/>
@@ -96,7 +96,7 @@
           <h3 class="card-title-new">The Creator</h3>
         </button>
 
-        <button class="profile-card-new" id="card-human" onclick="goToAbout('human')">
+        <button class="profile-card-new" id="card-human" onclick="goToPage('human')">
           <div class="card-icon-new bg-yellow">
             <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="28" cy="40" r="6.5" fill="#fff"/>
@@ -119,30 +119,457 @@
   <!-- ══════════════════ END CHOOSE PAGE ══════════════════ -->
 
 
-  <!-- ══════════════════ THE HUMAN PAGE ══════════════════ -->
-  <div id="about-page" class="page-hidden">
+  <!-- ══════════════════ THE ANALYST PAGE ══════════════════ -->
+  <div id="analyst-page" class="persona-page page-hidden">
     
-    <!-- Navbar -->
-    <nav class="human-nav">
-      <div class="human-logo">Kashish</div>
-      <div class="human-links">
-        <a href="#home" class="active">Home</a>
-        <a href="#analyst">The Analyst</a>
-        <a href="#creator">The Creator</a>
-        <a href="#about">About me</a>
-        <a href="#contact">Contact me</a>
+    <!-- Top Navbar -->
+    <nav class="analyst-top-nav">
+      <div class="analyst-brand" onclick="switchProfile('choose')">
+        <span class="analyst-logo-text">KASHISH</span>
+        <svg class="analyst-cap-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L1 18l1.71 1.71c1.31.61 2.75.97 4.29.97 5.52 0 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
       </div>
-      <div class="human-nav-icons">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <img src="kashish.jpg" alt="Profile" class="nav-profile-pic" />
+
+      <div class="analyst-nav-links">
+        <a href="#analyst" class="nav-tab active">THE ANALYST</a>
+        <a href="#creator" class="nav-tab" onclick="switchProfile('creator')">THE CREATOR</a>
+        <a href="#human" class="nav-tab" onclick="switchProfile('human')">THE HUMAN</a>
+      </div>
+
+      <div class="analyst-nav-right">
+        <a href="#resume" class="nav-resume-link">
+          <span>RESUME</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </a>
+        <a href="#contact" class="btn-connect-red">
+          LET'S CONNECT &nbsp; &rarr;
+        </a>
       </div>
     </nav>
 
     <!-- Hero Section -->
+    <section class="analyst-hero-section">
+      <div class="analyst-hero-grid">
+        
+        <!-- Left Hero Content -->
+        <div class="analyst-hero-left">
+          <div class="analyst-eyebrow">
+            <span class="eyebrow-num">02</span>
+            <span class="eyebrow-sep">|</span>
+            <span class="eyebrow-text">THE ANALYST</span>
+          </div>
+
+          <h1 class="analyst-main-title">
+            TURNING DATA<br />INTO DECISIONS<span class="title-red-dot">.</span>
+          </h1>
+
+          <p class="analyst-main-subtitle">
+            I analyze, visualize and translate complex data into clear insights that drive growth and impact.
+          </p>
+
+          <div class="analyst-btn-row">
+            <a href="#dashboards" class="btn-view-dashboards">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M8 5v14l11-7z"/></svg>
+              VIEW DASHBOARDS
+            </a>
+            <a href="#case-studies" class="btn-view-cases">
+              VIEW CASE STUDIES
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            </a>
+          </div>
+
+          <!-- Tools Section -->
+          <div class="analyst-tools-section">
+            <h4 class="tools-heading">TOOLS I WORK WITH</h4>
+            <div class="tools-badges-row">
+              <div class="tool-badge">
+                <svg viewBox="0 0 24 24" fill="#F2C811" width="18" height="18"><rect x="3" y="12" width="4" height="9" rx="1"/><rect x="10" y="7" width="4" height="14" rx="1"/><rect x="17" y="3" width="4" height="18" rx="1"/></svg>
+                <span>Power BI</span>
+              </div>
+              <div class="tool-badge">
+                <svg viewBox="0 0 24 24" fill="#00758F" width="18" height="18"><path d="M12 2C6.48 2 2 4.02 2 6.5v11C2 19.98 6.48 22 12 22s10-2.02 10-4.5v-11C22 4.02 17.52 2 12 2zm0 18c-4.41 0-8-1.34-8-3v-2.23c2.05 1.43 5.01 2.23 8 2.23s5.95-.8 8-2.23V17c0 1.66-3.59 3-8 3zm0-5c-4.41 0-8-1.34-8-3v-2.23c2.05 1.43 5.01 2.23 8 2.23s5.95-.8 8-2.23V12c0 1.66-3.59 3-8 3zm0-5c-4.41 0-8-1.34-8-3S7.59 4 12 4s8 1.34 8 3-3.59 3-8 3z"/></svg>
+                <span>SQL</span>
+              </div>
+              <div class="tool-badge">
+                <svg viewBox="0 0 24 24" fill="#21A366" width="18" height="18"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1.5 14h-1.37l-1.63-2.72L7.87 16H6.5l2.31-3.64L6.64 9h1.36l1.5 2.59L11.05 9h1.36L10.2 12.33 12.5 16z"/></svg>
+                <span>Excel</span>
+              </div>
+              <div class="tool-badge">
+                <svg viewBox="0 0 24 24" fill="#3776AB" width="18" height="18"><path d="M12 2C6.48 2 3 4.24 3 7.5v2.25c0 3.26 3.48 5.5 9 5.5s9-2.24 9-5.5V7.5C21 4.24 17.52 2 12 2zm-4 4a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm8 10c0 3.26-3.48 5.5-9 5.5s-9-2.24-9-5.5v-2.25C3 17.01 6.48 19.25 12 19.25s9-2.24 9-5.5V16c0 3.26-3.48 5.5-9 5.5zm4-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+                <span>Python</span>
+              </div>
+              <div class="tool-badge">
+                <svg viewBox="0 0 24 24" fill="#4285F4" width="18" height="18"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3" fill="#fff"/></svg>
+                <span>Looker Studio</span>
+              </div>
+              <div class="tool-badge">
+                <svg viewBox="0 0 24 24" fill="#10A37F" width="18" height="18"><path d="M22.28 9.82c-.34-1.92-1.6-3.52-3.41-4.22-.84-.33-1.76-.44-2.67-.32C15.42 3.32 13.56 2 11.48 2 8.72 2 6.38 3.93 5.86 6.64c-1.81.7-3.07 2.3-3.41 4.22-.36 2.01.2 4.08 1.54 5.61-.78 1.96-.34 4.27 1.18 5.76 1.52 1.49 3.82 1.93 5.78 1.15 1.53 1.34 3.6 1.9 5.61 1.54 1.92-.34 3.52-1.6 4.22-3.41.33-.84.44-1.76.32-2.67 1.96-.78 3.32-2.64 3.32-4.72 0-1.75-.82-3.37-2.14-4.3z"/></svg>
+                <span>ChatGPT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive Dashboard Card -->
+        <div class="analyst-hero-right">
+          <div class="overview-dashboard-card">
+            
+            <!-- Dashboard Top Bar -->
+            <div class="dash-top-bar">
+              <span class="dash-title">Overview</span>
+              <div class="dash-actions">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+              </div>
+            </div>
+
+            <div class="dash-body">
+              <!-- Left Mini Sidebar Icons -->
+              <div class="dash-sidebar-icons">
+                <span class="sidebar-icon active">🏠</span>
+                <span class="sidebar-icon">☆</span>
+                <span class="sidebar-icon">📊</span>
+                <span class="sidebar-icon">📁</span>
+                <span class="sidebar-icon">⚙️</span>
+              </div>
+
+              <!-- Main Dashboard Visuals -->
+              <div class="dash-main-area">
+                
+                <!-- 4 KPI Grid -->
+                <div class="dash-kpi-grid">
+                  <div class="kpi-card">
+                    <span class="kpi-label">Total Revenue</span>
+                    <span class="kpi-val">$2.45M</span>
+                    <span class="kpi-change positive">&uarr; 18.4% vs last month</span>
+                  </div>
+                  <div class="kpi-card">
+                    <span class="kpi-label">Total Orders</span>
+                    <span class="kpi-val">12,875</span>
+                    <span class="kpi-change positive">&uarr; 13.6% vs last month</span>
+                  </div>
+                  <div class="kpi-card">
+                    <span class="kpi-label">New Customers</span>
+                    <span class="kpi-val">2,345</span>
+                    <span class="kpi-change positive">&uarr; 15.7% vs last month</span>
+                  </div>
+                  <div class="kpi-card">
+                    <span class="kpi-label">Conversion Rate</span>
+                    <span class="kpi-val">3.67%</span>
+                    <span class="kpi-change positive">&uarr; 4.6% vs last month</span>
+                  </div>
+                </div>
+
+                <!-- Bottom 3 Charts Row -->
+                <div class="dash-charts-row">
+                  
+                  <!-- Line Chart Panel -->
+                  <div class="chart-panel line-chart-panel">
+                    <div class="chart-panel-title">Revenue Over Time</div>
+                    <div class="svg-line-wrapper">
+                      <svg viewBox="0 0 240 100" class="revenue-svg">
+                        <defs>
+                          <linearGradient id="lineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.4" />
+                            <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0" />
+                          </linearGradient>
+                        </defs>
+                        <polygon points="10,80 35,65 60,75 85,45 110,60 135,35 160,50 185,25 210,15 225,28 225,90 10,90" fill="url(#lineGrad)" />
+                        <polyline points="10,80 35,65 60,75 85,45 110,60 135,35 160,50 185,25 210,15 225,28" fill="none" stroke="#3b82f6" stroke-width="2.5" />
+                        <circle cx="135" cy="35" r="3.5" fill="#fff" stroke="#3b82f6" stroke-width="2" />
+                      </svg>
+                      <div class="line-peak-label">
+                        <span>May</span>
+                        <strong>$2.15M</strong>
+                      </div>
+                      <div class="chart-x-axis">
+                        <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Donut Chart Panel -->
+                  <div class="chart-panel donut-chart-panel">
+                    <div class="chart-panel-title">Revenue by Channel</div>
+                    <div class="donut-wrapper">
+                      <svg viewBox="0 0 100 100" class="donut-svg">
+                        <circle cx="50" cy="50" r="30" stroke="#1d283a" stroke-width="14" fill="none"/>
+                        <circle cx="50" cy="50" r="30" stroke="#2563eb" stroke-width="14" fill="none" stroke-dasharray="100 88" stroke-dashoffset="25"/>
+                        <circle cx="50" cy="50" r="30" stroke="#60a5fa" stroke-width="14" fill="none" stroke-dasharray="35 153" stroke-dashoffset="-75"/>
+                      </svg>
+                      <div class="donut-legend">
+                        <div><span class="dot blue"></span> Paid Search <strong>54%</strong></div>
+                        <div><span class="dot dark"></span> Direct</div>
+                        <div><span class="dot light"></span> Referral</div>
+                        <div><span class="dot muted"></span> Social <strong>5%</strong></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Bar Chart Panel -->
+                  <div class="chart-panel bar-chart-panel">
+                    <div class="chart-panel-title">Top Performing Categories</div>
+                    <div class="bars-list">
+                      <div class="bar-row">
+                        <span>Electronics</span>
+                        <div class="bar-track"><div class="bar-fill" style="width: 90%;"></div></div>
+                      </div>
+                      <div class="bar-row">
+                        <span>Fashion</span>
+                        <div class="bar-track"><div class="bar-fill" style="width: 70%;"></div></div>
+                      </div>
+                      <div class="bar-row">
+                        <span>Home &amp; Living</span>
+                        <div class="bar-track"><div class="bar-fill" style="width: 45%;"></div></div>
+                      </div>
+                      <div class="bar-row">
+                        <span>Beauty</span>
+                        <div class="bar-track"><div class="bar-fill" style="width: 30%;"></div></div>
+                      </div>
+                    </div>
+                    <div class="bar-x-axis">
+                      <span>0</span><span>400K</span><span>800K</span><span>1.2M</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Featured Case Studies Section -->
+    <section class="analyst-case-studies-section">
+      <div class="case-studies-header">
+        <h3 class="case-studies-title">FEATURED CASE STUDIES</h3>
+        <span class="case-studies-arrow">&rarr;</span>
+      </div>
+
+      <div class="case-studies-grid">
+        
+        <!-- Card 1: NYKAA -->
+        <div class="case-study-card theme-nykaa">
+          <div class="case-card-bg"></div>
+          <div class="case-card-content">
+            <span class="case-tag">DATA ANALYTICS</span>
+            <h3 class="case-title">NYKAA</h3>
+            <p class="case-desc">Marketing performance analysis and ROI dashboard</p>
+            <div class="case-footer">
+              <span class="case-tech">Power BI &bull; DAX &bull; Power Query</span>
+              <button class="case-play-btn" aria-label="View Nykaa Case Study">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: GLOBAL TECH GIANTS -->
+        <div class="case-study-card theme-tech">
+          <div class="case-card-bg"></div>
+          <div class="case-card-content">
+            <span class="case-tag">BUSINESS ANALYSIS</span>
+            <h3 class="case-title">GLOBAL TECH GIANTS</h3>
+            <p class="case-desc">Financial performance dashboard of top tech companies</p>
+            <div class="case-footer">
+              <span class="case-tech">Power BI &bull; Financial Modeling</span>
+              <button class="case-play-btn" aria-label="View Tech Giants Case Study">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: BABYILLION -->
+        <div class="case-study-card theme-babyillion">
+          <div class="case-card-bg"></div>
+          <div class="case-card-content">
+            <span class="case-tag">BUSINESS DEVELOPMENT</span>
+            <h3 class="case-title">BABYILLION</h3>
+            <p class="case-desc">Market research &amp; CRM pipeline for brand partnerships</p>
+            <div class="case-footer">
+              <span class="case-tech">Notion &bull; CRM &bull; Excel</span>
+              <button class="case-play-btn" aria-label="View Babyillion Case Study">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: AERCHAIN -->
+        <div class="case-study-card theme-aerchain">
+          <div class="case-card-bg"></div>
+          <div class="case-card-content">
+            <span class="case-tag">GROWTH STRATEGY</span>
+            <h3 class="case-title">AERCHAIN</h3>
+            <p class="case-desc">Founder outreach &amp; growth strategy framework</p>
+            <div class="case-footer">
+              <span class="case-tech">Research &bull; Outreach &bull; Strategy</span>
+              <button class="case-play-btn" aria-label="View Aerchain Case Study">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bottom Stats Banner -->
+    <section class="analyst-stats-banner-wrap">
+      <div class="analyst-stats-banner">
+        <div class="stat-col">
+          <span class="stat-number">10+</span>
+          <span class="stat-label">Dashboards Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-col">
+          <span class="stat-number">150+</span>
+          <span class="stat-label">Data Insights Delivered</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-col">
+          <span class="stat-number">4+</span>
+          <span class="stat-label">Startups Worked With</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-col">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Business Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-col">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Data Driven Decisions</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <!-- ══════════════════ END THE ANALYST PAGE ══════════════════ -->
+
+
+  <!-- ══════════════════ THE CREATOR PAGE ══════════════════ -->
+  <div id="creator-page" class="persona-page page-hidden">
+    
+    <nav class="persona-nav">
+      <div class="human-logo">Kashish</div>
+      <div class="human-links">
+        <a href="#" class="active">Home</a>
+        <a href="#">Design Work</a>
+        <a href="#">Content</a>
+        <a href="#">Collaborations</a>
+        <a href="#">Contact me</a>
+      </div>
+      <div class="human-nav-icons">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <div class="profile-dropdown-wrap">
+          <img src="kashish.jpg" alt="Profile" class="nav-profile-pic" onclick="toggleDropdown(this)" />
+          <div class="profile-dropdown">
+            <div class="dropdown-item" onclick="switchProfile('analyst')">
+              <div class="dropdown-avatar bg-blue-sm"></div>
+              <span>The Analyst</span>
+            </div>
+            <div class="dropdown-item" onclick="switchProfile('creator')">
+              <div class="dropdown-avatar bg-red-sm"></div>
+              <span>The Creator</span>
+            </div>
+            <div class="dropdown-item" onclick="switchProfile('human')">
+              <div class="dropdown-avatar bg-yellow-sm"></div>
+              <span>The Human</span>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item" onclick="switchProfile('choose')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Manage Profiles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="persona-hero">
+      <div class="persona-hero-bg" style="background: linear-gradient(135deg, #2d0a0a 0%, #8b1a1a 50%, #3d0c0c 100%);"></div>
+      <div class="hero-vignette"></div>
+      <div class="human-hero-content">
+        <p class="hero-eyebrow">INTRODUCING</p>
+        <h1 class="hero-title">Kashish<br>The Creator</h1>
+        <p class="hero-subtitle">Ideas need a voice.<br><b>I give them one.</b></p>
+        <div class="hero-buttons">
+          <button class="btn-play">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            View creations
+          </button>
+          <button class="btn-more">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            More About Me
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="human-section">
+      <h3 class="section-title">Creative Projects</h3>
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="project-card" style="background: linear-gradient(45deg, #2d0a0a, #c0392b);"><h4>Brand Identity</h4></div>
+          <div class="project-card" style="background: linear-gradient(45deg, #3d0c0c, #e74c3c);"><h4>Video Production</h4></div>
+          <div class="project-card" style="background: linear-gradient(45deg, #4a1010, #d35400);"><h4>Social Media</h4></div>
+          <div class="project-card" style="background: linear-gradient(45deg, #1a0505, #922b21);"><h4>Photography</h4></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- ══════════════════ END THE CREATOR PAGE ══════════════════ -->
+
+
+  <!-- ══════════════════ THE HUMAN PAGE ══════════════════ -->
+  <div id="human-page" class="persona-page page-hidden">
+    
+    <nav class="persona-nav">
+      <div class="human-logo">Kashish</div>
+      <div class="human-links">
+        <a href="#" class="active">Home</a>
+        <a href="#">The Analyst</a>
+        <a href="#">The Creator</a>
+        <a href="#">About me</a>
+        <a href="#">Contact me</a>
+      </div>
+      <div class="human-nav-icons">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <div class="profile-dropdown-wrap">
+          <img src="kashish.jpg" alt="Profile" class="nav-profile-pic" onclick="toggleDropdown(this)" />
+          <div class="profile-dropdown">
+            <div class="dropdown-item" onclick="switchProfile('analyst')">
+              <div class="dropdown-avatar bg-blue-sm"></div>
+              <span>The Analyst</span>
+            </div>
+            <div class="dropdown-item" onclick="switchProfile('creator')">
+              <div class="dropdown-avatar bg-red-sm"></div>
+              <span>The Creator</span>
+            </div>
+            <div class="dropdown-item" onclick="switchProfile('human')">
+              <div class="dropdown-avatar bg-yellow-sm"></div>
+              <span>The Human</span>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item" onclick="switchProfile('choose')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Manage Profiles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Video -->
     <section class="human-hero">
       <div class="human-hero-bg">
-        <video class="hero-video-bg" autoplay loop playsinline poster="kashish-video-poster.png">
-          <source src="background-video.mp4" type="video/mp4">
+        <video id="hero-video" class="hero-video-bg" loop playsinline muted poster="kashish-video-poster.png" data-src="background-video.mp4">
         </video>
         <div class="hero-vignette"></div>
       </div>
@@ -193,7 +620,6 @@
       <h3 class="section-title">Some Glimpses</h3>
       <div class="carousel-container">
         <div class="carousel-track glimpses-track">
-          <!-- Placeholder video box -->
           <div class="glimpse-card video-placeholder">
             <div class="play-overlay">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
