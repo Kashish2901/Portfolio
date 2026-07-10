@@ -2253,13 +2253,27 @@ html, body {
 
 .creator-hero-grid {
   display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 50px;
+  grid-template-columns: 1fr auto 340px;
+  gap: 30px;
   align-items: center;
 }
 
+.creator-hero-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.creator-hero-portrait {
+  max-height: 480px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.85));
+}
+
 .creator-hero-left {
-  max-width: 850px;
+  max-width: 650px;
   text-align: left;
 }
 

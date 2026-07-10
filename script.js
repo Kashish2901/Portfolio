@@ -150,12 +150,16 @@
         heroVideo.play().catch(() => {});
       }
 
-      // Play video ONLY when navigating TO creator page
+      // Play background video WITH MUSIC when navigating TO creator page
       if (persona === 'creator' && creatorVideo) {
         if (!creatorVideo.getAttribute('src')) {
           creatorVideo.setAttribute('src', 'creator-bg.mp4');
         }
         creatorVideo.currentTime = 0;
+        creatorVideo.muted = false;
+        creatorVideo.volume = 0.85;
+        const soundBtn = document.getElementById('creator-sound-btn');
+        if (soundBtn) soundBtn.innerHTML = '<span>🔊 MUSIC ON</span>';
         creatorVideo.play().catch(() => {});
       }
 
@@ -222,6 +226,20 @@
   window.toggleAnalystAudio = function() {
     const video = document.getElementById('analyst-video');
     const btn = document.getElementById('analyst-sound-btn');
+    if (!video || !btn) return;
+    if (video.muted) {
+      video.muted = false;
+      video.volume = 0.85;
+      btn.innerHTML = '<span>🔊 MUSIC ON</span>';
+    } else {
+      video.muted = true;
+      btn.innerHTML = '<span>🔇 MUSIC OFF</span>';
+    }
+  };
+
+  window.toggleCreatorAudio = function() {
+    const video = document.getElementById('creator-hero-video');
+    const btn = document.getElementById('creator-sound-btn');
     if (!video || !btn) return;
     if (video.muted) {
       video.muted = false;

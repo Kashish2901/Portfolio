@@ -560,6 +560,11 @@
     <video id="creator-hero-video" class="creator-bg-video" loop playsinline muted src="creator-bg.mp4"></video>
     <div class="creator-video-overlay"></div>
 
+    <!-- Sound Toggle Button -->
+    <button id="creator-sound-btn" class="analyst-sound-toggle" onclick="toggleCreatorAudio()" aria-label="Toggle Creator Music">
+      <span>🔊 MUSIC ON</span>
+    </button>
+
     <!-- Top Navbar -->
     <nav class="analyst-top-nav">
       <div class="analyst-brand" onclick="switchProfile('choose')">
@@ -591,6 +596,8 @@
         <!-- Left Content -->
         <div class="creator-hero-left">
           <div class="analyst-eyebrow">
+            <span class="eyebrow-num">03</span>
+            <span class="eyebrow-sep">|</span>
             <span class="eyebrow-text">THE CREATOR</span>
           </div>
 
@@ -612,6 +619,11 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
             </a>
           </div>
+        </div>
+
+        <!-- Center Portrait Image -->
+        <div class="creator-hero-center">
+          <img src="kashish-right.png" alt="Kashish The Creator" class="creator-hero-portrait" />
         </div>
 
         <!-- Right Hero Stats Column -->
