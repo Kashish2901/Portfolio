@@ -2897,16 +2897,17 @@ html, body {
 }
 
 .hm-quote-text {
-  font-size: 17px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.92);
-  font-style: italic;
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
 }
 
 .hm-quote-author {
-  font-family: 'Georgia', serif;
-  font-style: italic;
-  font-size: 26px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 18px;
   color: var(--red);
   white-space: nowrap;
 }
@@ -2935,9 +2936,9 @@ html, body {
 
 .hm-card-title {
   font-family: var(--font-display);
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   color: #fff;
   text-transform: uppercase;
 }
@@ -2960,9 +2961,10 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  font-size: 14px;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .hm-story-visual {
@@ -3037,9 +3039,11 @@ html, body {
 }
 
 .hm-driver-text {
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.45;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.55;
 }
 
 /* ── Passions & Chapters Grid ── */
@@ -3076,16 +3080,18 @@ html, body {
 }
 
 .hm-passion-title {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: 16px;
   font-weight: 700;
   color: #fff;
+  letter-spacing: 0.01em;
 }
 
 .hm-passion-desc {
-  font-size: 13.5px;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.55;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.65;
 }
 
 @media (max-width: 1200px) {
