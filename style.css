@@ -3107,6 +3107,43 @@ html, body {
   }
 }
 
+/* ── Some Glimpses Looping Video Section ── */
+.glimpses-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.glimpses-video-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #060609;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75);
+}
+
+.glimpses-video {
+  width: 100%;
+  max-height: 540px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Edge blend overlay so video borders dissolve seamlessly into the surrounding dark page background */
+.glimpses-video-blend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(180deg, rgba(8, 8, 14, 0.85) 0%, transparent 15%, transparent 85%, rgba(8, 8, 14, 0.85) 100%),
+    linear-gradient(90deg, rgba(8, 8, 14, 0.7) 0%, transparent 10%, transparent 90%, rgba(8, 8, 14, 0.7) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
 /* ═══════════════════════════════════════════════════════
    INTERACTIVE RESUME VIEWER MODAL STYLES
 ═══════════════════════════════════════════════════════ */
