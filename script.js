@@ -168,6 +168,10 @@
           creatorVideo.setAttribute('src', 'creator-bg.mp4');
         }
         creatorVideo.currentTime = 0;
+        creatorVideo.muted = false;
+        creatorVideo.volume = 0.85;
+        const creatorSoundBtn = document.getElementById('creator-sound-btn');
+        if (creatorSoundBtn) creatorSoundBtn.innerHTML = '<span>🔊 MUSIC ON</span>';
         creatorVideo.play().catch(() => {});
       }
 
@@ -248,6 +252,20 @@
   window.toggleHumanSound = function() {
     const video = document.getElementById('human-bg-video');
     const btn = document.getElementById('human-sound-btn');
+    if (!video || !btn) return;
+    if (video.muted) {
+      video.muted = false;
+      video.volume = 0.85;
+      btn.innerHTML = '<span>🔊 MUSIC ON</span>';
+    } else {
+      video.muted = true;
+      btn.innerHTML = '<span>🔇 MUSIC OFF</span>';
+    }
+  };
+
+  window.toggleCreatorAudio = function() {
+    const video = document.getElementById('creator-hero-video');
+    const btn = document.getElementById('creator-sound-btn');
     if (!video || !btn) return;
     if (video.muted) {
       video.muted = false;

@@ -557,8 +557,13 @@
   <div id="creator-page" class="persona-page page-hidden">
     
     <!-- Background Video for The Creator Page -->
-    <video id="creator-hero-video" class="creator-bg-video" loop playsinline muted src="creator-bg.mp4"></video>
+    <video id="creator-hero-video" class="creator-bg-video" autoplay loop playsinline muted src="creator-bg.mp4"></video>
     <div class="creator-video-overlay"></div>
+
+    <!-- Sound Toggle Button -->
+    <button id="creator-sound-btn" class="analyst-sound-toggle" onclick="toggleCreatorAudio()" aria-label="Toggle Creator Music">
+      <span>🔊 MUSIC ON</span>
+    </button>
 
     <!-- Top Navbar -->
     <nav class="analyst-top-nav">
