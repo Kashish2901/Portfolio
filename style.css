@@ -1013,8 +1013,10 @@ html, body {
 /* ─── Hero Section ─── */
 .analyst-hero-section {
   padding: 60px 50px 40px;
-  max-width: 1600px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .analyst-hero-grid {
@@ -1655,9 +1657,11 @@ html, body {
    THE ANALYST COMPLETE FULL-PAGE SECTIONS
 ═══════════════════════════════════════════════════════ */
 .analyst-section {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 40px 60px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 40px 50px;
+  box-sizing: border-box;
 }
 
 .analyst-sec-header {
