@@ -702,19 +702,46 @@
         <a href="#creator-projects" class="sec-header-link">VIEW ALL PROJECTS &rarr;</a>
       </div>
 
-      <div class="creator-projects-grid">
+      <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+        <defs>
+          <linearGradient id="boatCaseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#cfd4dc"/>
+          </linearGradient>
+          <linearGradient id="trophyGold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffe66d"/>
+            <stop offset="100%" stop-color="#d4af37"/>
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <div class="creator-projects-row-grid">
         <!-- Project 1: boAt -->
-        <div class="cr-project-card">
-          <div class="cr-project-thumb">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" width="64" height="64"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-            <span class="cr-project-badge">Creative Lead</span>
+        <div class="cr-proj-card-h">
+          <div class="cr-proj-cover pane-boat">
+            <div class="boat-logo-text">boAt</div>
+            <svg class="boat-earbuds-svg" viewBox="0 0 120 160" fill="none">
+              <rect x="25" y="65" width="70" height="75" rx="22" fill="url(#boatCaseGrad)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+              <ellipse cx="60" cy="65" rx="35" ry="12" fill="#d8dbe0"/>
+              <circle cx="60" cy="103" r="4" fill="#69857d"/>
+              <path d="M45 60 C40 30, 55 20, 60 40" stroke="#e8ebf0" stroke-width="12" stroke-linecap="round"/>
+              <circle cx="43" cy="50" r="12" fill="#f0f3f6"/>
+              <path d="M75 60 C85 15, 95 10, 95 40" stroke="#e8ebf0" stroke-width="11" stroke-linecap="round"/>
+              <circle cx="95" cy="18" r="6" fill="#e50914"/>
+            </svg>
           </div>
-          <div class="cr-project-body">
+          <div class="cr-proj-content">
             <div>
-              <h4 class="cr-project-title">Ad Wars: Brand Campaign Simulation</h4>
-              <p class="cr-project-desc">Led a campaign for boAt lifestyle with a 4-person team. Developed visuals, storyboards, and messaging. Executed organic social launch. Recognized by startup ecosystem &amp; marketing leaders for creative quality.</p>
+              <h4 class="cr-proj-title">Ad Wars: Brand Campaign Simulation</h4>
+              <span class="cr-proj-badge">Creative Lead</span>
+              <ul class="cr-proj-bullets">
+                <li>Led a campaign for boAt lifestyle with a 4-person team.</li>
+                <li>Developed visuals, storyboards, and messaging.</li>
+                <li>Executed organic social launch.</li>
+                <li>Recognized by startup ecosystem &amp; marketing leaders for creative quality.</li>
+              </ul>
             </div>
-            <div class="cr-project-tags">
+            <div class="cr-proj-tags">
               <span class="cr-tool-pill">Campaign Strategy</span>
               <span class="cr-tool-pill">Creative Production</span>
             </div>
@@ -722,17 +749,32 @@
         </div>
 
         <!-- Project 2: Proteino -->
-        <div class="cr-project-card">
-          <div class="cr-project-thumb" style="background: radial-gradient(circle at center, #3a2212 0%, #17110e 100%);">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,180,100,0.3)" stroke-width="1.5" width="64" height="64"><circle cx="12" cy="12" r="10"/><circle cx="8" cy="10" r="1" fill="rgba(255,180,100,0.4)"/><circle cx="15" cy="9" r="1" fill="rgba(255,180,100,0.4)"/><circle cx="11" cy="15" r="1.5" fill="rgba(255,180,100,0.4)"/></svg>
-            <span class="cr-project-badge">Digital Marketing</span>
+        <div class="cr-proj-card-h">
+          <div class="cr-proj-cover pane-proteino">
+            <svg class="proteino-svg" viewBox="0 0 120 160" fill="none">
+              <rect x="22" y="25" width="56" height="74" rx="6" fill="#14110f" stroke="#f58220" stroke-width="1.5"/>
+              <text x="50" y="44" text-anchor="middle" fill="#f58220" font-size="8.5" font-weight="900" letter-spacing="1">PROTEINO</text>
+              <circle cx="50" cy="70" r="16" fill="#7a4821"/>
+              <circle cx="44" cy="66" r="2.5" fill="#2a140a"/>
+              <circle cx="56" cy="73" r="3" fill="#2a140a"/>
+              <circle cx="48" cy="76" r="2" fill="#2a140a"/>
+              <ellipse cx="60" cy="125" rx="38" ry="14" fill="#6a3d1c"/>
+              <circle cx="45" cy="122" r="3" fill="#221006"/>
+              <circle cx="68" cy="126" r="3.5" fill="#221006"/>
+              <circle cx="58" cy="118" r="2.5" fill="#221006"/>
+            </svg>
           </div>
-          <div class="cr-project-body">
+          <div class="cr-proj-content">
             <div>
-              <h4 class="cr-project-title">Proteino.online: Protein Cookie Brand</h4>
-              <p class="cr-project-desc">Researched market trends to position the brand for health-conscious consumers. Launched a Shopify storefront. Owned Meta ad campaigns and analyzed performance using Meta Ads Manager reports.</p>
+              <h4 class="cr-proj-title">Proteino.online: Protein Cookie Brand</h4>
+              <span class="cr-proj-badge">Digital Marketing</span>
+              <ul class="cr-proj-bullets">
+                <li>Researched market trends to position the brand for health-conscious consumers.</li>
+                <li>Launched a Shopify storefront.</li>
+                <li>Owned Meta ad campaigns and analyzed performance using Meta Ads Manager reports.</li>
+              </ul>
             </div>
-            <div class="cr-project-tags">
+            <div class="cr-proj-tags">
               <span class="cr-tool-pill">Meta Ads</span>
               <span class="cr-tool-pill">Shopify</span>
             </div>
@@ -740,17 +782,28 @@
         </div>
 
         <!-- Project 3: Quirky Store -->
-        <div class="cr-project-card">
-          <div class="cr-project-thumb" style="background: radial-gradient(circle at center, #2e1c3a 0%, #15111c 100%);">
-            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(200,140,255,0.3)" stroke-width="1.5" width="64" height="64"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
-            <span class="cr-project-badge">Brand Strategist</span>
+        <div class="cr-proj-card-h">
+          <div class="cr-proj-cover pane-quirky">
+            <svg class="quirky-svg" viewBox="0 0 120 160" fill="none">
+              <circle cx="60" cy="48" r="28" fill="rgba(229,9,20,0.18)"/>
+              <path d="M48 55 h24 v14 c0 8 -5 14 -12 14 s-12 -6 -12 -14 Z" fill="url(#trophyGold)" stroke="#ffd700" stroke-width="1.5"/>
+              <path d="M48 58 C38 58, 38 70, 48 70" stroke="#ffd700" stroke-width="2" fill="none"/>
+              <path d="M72 58 C82 58, 82 70, 72 70" stroke="#ffd700" stroke-width="2" fill="none"/>
+              <rect x="55" y="83" width="10" height="15" fill="#d4af37"/>
+              <rect x="44" y="98" width="32" height="12" rx="3" fill="#222" stroke="#ffd700" stroke-width="1"/>
+            </svg>
           </div>
-          <div class="cr-project-body">
+          <div class="cr-proj-content">
             <div>
-              <h4 class="cr-project-title">The Quirky Store Business Challenge</h4>
-              <p class="cr-project-desc">Managed sales, marketing, and team coordination during a 2-day live competition. Generated ₹23,000 in sales within 15 hours. Secured 2nd place in profitability.</p>
+              <h4 class="cr-proj-title">The Quirky Store Business Challenge</h4>
+              <span class="cr-proj-badge">Brand Strategist</span>
+              <ul class="cr-proj-bullets">
+                <li>Managed sales, marketing, and team coordination during a 2-day live competition.</li>
+                <li>Generated ₹23,000 in sales within 15 hours.</li>
+                <li>Secured 2nd place in profitability.</li>
+              </ul>
             </div>
-            <div class="cr-project-tags">
+            <div class="cr-proj-tags">
               <span class="cr-tool-pill">Sales</span>
               <span class="cr-tool-pill">Marketing</span>
             </div>
@@ -761,57 +814,73 @@
 
     <!-- ─── CREATOR TOOLKIT ─── -->
     <section class="analyst-section creator-toolkit-section">
-      <h3 class="analyst-sec-heading">CREATOR TOOLKIT</h3>
-      <div class="cr-toolkit-grid">
-        <div class="cr-toolkit-card">
-          <svg viewBox="0 0 24 24" fill="#00C4CC" width="28" height="28"><circle cx="12" cy="12" r="10"/><path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="#fff" stroke-width="2" fill="none"/></svg>
-          <div class="cr-tk-name">Canva</div>
-          <div class="cr-tk-cat">Designs &amp; Visuals</div>
-        </div>
-        <div class="cr-toolkit-card">
-          <svg viewBox="0 0 24 24" fill="#F24E1E" width="28" height="28"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/></svg>
-          <div class="cr-tk-name">Figma</div>
-          <div class="cr-tk-cat">UI/Creative Design</div>
-        </div>
-        <div class="cr-toolkit-card">
-          <svg viewBox="0 0 24 24" fill="#ffffff" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="3" fill="#111"/><path d="M8 7h3l5 8V7h2v10h-3l-5-8v8H8V7z" fill="#fff"/></svg>
-          <div class="cr-tk-name">Notion</div>
-          <div class="cr-tk-cat">Planning &amp; Organization</div>
-        </div>
-        <div class="cr-toolkit-card">
-          <svg viewBox="0 0 24 24" fill="#1877F2" width="28" height="28"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.99 3.66 9.12 8.44 9.88v-6.99H7.9v-2.89h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v6.99C18.34 21.12 22 16.99 22 12c0-5.52-4.48-10-10-10z"/></svg>
-          <div class="cr-tk-name">Meta Ads Manager</div>
-          <div class="cr-tk-cat">Campaigns &amp; Reporting</div>
-        </div>
-        <div class="cr-toolkit-card">
-          <svg viewBox="0 0 24 24" fill="#ffffff" width="28" height="28"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          <div class="cr-tk-name">CapCut</div>
-          <div class="cr-tk-cat">Video Editing &amp; Reels</div>
-        </div>
-        <div class="cr-toolkit-card">
-          <svg viewBox="0 0 24 24" fill="#10A37F" width="28" height="28"><path d="M22.28 9.82c-.34-1.92-1.6-3.52-3.41-4.22-.84-.33-1.76-.44-2.67-.32C15.42 3.32 13.56 2 11.48 2 8.72 2 6.38 3.93 5.86 6.64c-1.81.7-3.07 2.3-3.41 4.22-.36 2.01.2 4.08 1.54 5.61-.78 1.96-.34 4.27 1.18 5.76 1.52 1.49 3.82 1.93 5.78 1.15 1.53 1.34 3.6 1.9 5.61 1.54 1.92-.34 3.52-1.6 4.22-3.41.33-.84.44-1.76.32-2.67 1.96-.78 3.32-2.64 3.32-4.72 0-1.75-.82-3.37-2.14-4.3z"/></svg>
-          <div class="cr-tk-name">ChatGPT</div>
-          <div class="cr-tk-cat">Ideas &amp; Content Assistance</div>
-        </div>
-        <div class="cr-toolkit-card">
-          <svg viewBox="0 0 24 24" fill="#4285F4" width="28" height="28"><polygon points="12 2 2 19 22 19" fill="#4285F4"/></svg>
-          <div class="cr-tk-name">Google Drive</div>
-          <div class="cr-tk-cat">Storage &amp; Collaboration</div>
-        </div>
-        <div class="cr-toolkit-card">
-          <svg viewBox="0 0 24 24" fill="#95BF47" width="28" height="28"><path d="M18.8 6.4c-.1-.2-.4-.3-.7-.4-.3-.1-1.3-.1-1.3-.1s-.9-.8-1.2-1.1c-.3-.3-.9-.2-1-.2-.2 0-1.6.1-2.9.2C10.5 4.9 9 5 8.9 5c-.3 0-.5.2-.6.4C8.2 5.8 7.3 8.3 7.3 8.3L6 8.5s-.6.1-.7.6c0 .2.2.6.4.8l8.3 10.7c.3.4.9.4 1.2 0l4.5-12.7c.1-.5-.9-1.5-.9-1.5z"/></svg>
-          <div class="cr-tk-name">Shopify</div>
-          <div class="cr-tk-cat">Storefront Management</div>
-        </div>
-        <div class="cr-toolkit-card">
-          <svg viewBox="0 0 24 24" fill="#FF0000" width="28" height="28"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          <div class="cr-tk-name">YouTube Studio</div>
-          <div class="cr-tk-cat">Channel Management</div>
-        </div>
-        <div class="cr-toolkit-card">
-          <svg viewBox="0 0 24 24" fill="#E4405F" width="28" height="28"><rect x="2" y="2" width="20" height="20" rx="6" fill="none" stroke="#E4405F" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="#E4405F" stroke-width="2"/><circle cx="18" cy="6" r="1.2" fill="#E4405F"/></svg>
-          <div class="cr-tk-name">Instagram</div>
-          <div class="cr-tk-cat">Content &amp; Community</div>
+      <div class="cr-toolkit-bar">
+        <div class="cr-tk-heading">CREATOR TOOLKIT</div>
+        <div class="cr-tk-items-row">
+          <div class="cr-tk-col">
+            <div class="cr-tk-icon icon-canva">C</div>
+            <div class="cr-tk-name">Canva</div>
+            <div class="cr-tk-cat">Designs &amp;<br/>Visuals</div>
+          </div>
+          <div class="cr-tk-col">
+            <div class="cr-tk-icon icon-figma">
+              <svg viewBox="0 0 24 24" width="24" height="24"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" fill="#F24E1E"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" fill="#FF7262"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" fill="#1ABCFE"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" fill="#A259FF"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" fill="#0ACF83"/></svg>
+            </div>
+            <div class="cr-tk-name">Figma</div>
+            <div class="cr-tk-cat">UI/Creative<br/>Design</div>
+          </div>
+          <div class="cr-tk-col">
+            <div class="cr-tk-icon icon-notion">N</div>
+            <div class="cr-tk-name">Notion</div>
+            <div class="cr-tk-cat">Planning &amp;<br/>Organization</div>
+          </div>
+          <div class="cr-tk-col">
+            <div class="cr-tk-icon icon-meta">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#0080fb"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.99 3.66 9.12 8.44 9.88v-6.99H7.9v-2.89h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v6.99C18.34 21.12 22 16.99 22 12c0-5.52-4.48-10-10-10z"/></svg>
+            </div>
+            <div class="cr-tk-name">Meta Ads<br/>Manager</div>
+            <div class="cr-tk-cat">Campaigns &amp;<br/>Reporting</div>
+          </div>
+          <div class="cr-tk-col">
+            <div class="cr-tk-icon icon-capcut">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="#ffffff"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="cr-tk-name">CapCut</div>
+            <div class="cr-tk-cat">Video Editing<br/>&amp; Reels</div>
+          </div>
+          <div class="cr-tk-col">
+            <div class="cr-tk-icon icon-chatgpt">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#10A37F"><path d="M22.28 9.82c-.34-1.92-1.6-3.52-3.41-4.22-.84-.33-1.76-.44-2.67-.32C15.42 3.32 13.56 2 11.48 2 8.72 2 6.38 3.93 5.86 6.64c-1.81.7-3.07 2.3-3.41 4.22-.36 2.01.2 4.08 1.54 5.61-.78 1.96-.34 4.27 1.18 5.76 1.52 1.49 3.82 1.93 5.78 1.15 1.53 1.34 3.6 1.9 5.61 1.54 1.92-.34 3.52-1.6 4.22-3.41.33-.84.44-1.76.32-2.67 1.96-.78 3.32-2.64 3.32-4.72 0-1.75-.82-3.37-2.14-4.3z"/></svg>
+            </div>
+            <div class="cr-tk-name">ChatGPT</div>
+            <div class="cr-tk-cat">Ideas &amp; Content<br/>Assistance</div>
+          </div>
+          <div class="cr-tk-col">
+            <div class="cr-tk-icon icon-gdrive">
+              <svg viewBox="0 0 24 24" width="24" height="24"><polygon points="12 2 4 16 10 16 16 5" fill="#FFC107"/><polygon points="4 16 8 22 20 22 14 13" fill="#1976D2"/><polygon points="12 2 16 5 20 13 20 22" fill="#4CAF50"/></svg>
+            </div>
+            <div class="cr-tk-name">Google Drive</div>
+            <div class="cr-tk-cat">Storage &amp;<br/>Collaboration</div>
+          </div>
+          <div class="cr-tk-col">
+            <div class="cr-tk-icon icon-shopify">S</div>
+            <div class="cr-tk-name">Shopify</div>
+            <div class="cr-tk-cat">Storefront<br/>Management</div>
+          </div>
+          <div class="cr-tk-col">
+            <div class="cr-tk-icon icon-yt">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </div>
+            <div class="cr-tk-name">YouTube<br/>Studio</div>
+            <div class="cr-tk-cat">Channel<br/>Management</div>
+          </div>
+          <div class="cr-tk-col">
+            <div class="cr-tk-icon icon-insta">
+              <svg viewBox="0 0 24 24" width="22" height="22"><rect x="2" y="2" width="20" height="20" rx="6" fill="none" stroke="#ffffff" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="#ffffff" stroke-width="2"/><circle cx="18" cy="6" r="1.3" fill="#ffffff"/></svg>
+            </div>
+            <div class="cr-tk-name">Instagram</div>
+            <div class="cr-tk-cat">Content &amp;<br/>Community</div>
+          </div>
         </div>
       </div>
     </section>
