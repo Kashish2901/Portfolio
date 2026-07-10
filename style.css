@@ -907,10 +907,8 @@ html, body {
   align-items: center;
   justify-content: space-between;
   padding: 18px 50px;
-  background: rgba(8, 8, 14, 0.28);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
+  border-bottom: none;
   z-index: 50;
 }
 
