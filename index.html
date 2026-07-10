@@ -136,7 +136,7 @@
       </div>
 
       <div class="analyst-nav-right">
-        <a href="Kashish_Resume.docx" download="Kashish_Resume.docx" class="nav-resume-link">
+        <a href="#" onclick="openResumeModal(); return false;" class="nav-resume-link">
           <span>RESUME</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         </a>
@@ -470,7 +470,7 @@
       </div>
 
       <div class="analyst-nav-right">
-        <a href="Kashish_Resume.docx" download="Kashish_Resume.docx" class="nav-resume-link">
+        <a href="#" onclick="openResumeModal(); return false;" class="nav-resume-link">
           <span>RESUME</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         </a>
@@ -534,7 +534,7 @@
       </div>
 
       <div class="analyst-nav-right">
-        <a href="Kashish_Resume.docx" download="Kashish_Resume.docx" class="nav-resume-link">
+        <a href="#" onclick="openResumeModal(); return false;" class="nav-resume-link">
           <span>RESUME</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         </a>
@@ -612,6 +612,175 @@
 
   </div>
   <!-- ══════════════════ END THE HUMAN PAGE ══════════════════ -->
+
+  <!-- ══════════════════ INTERACTIVE RESUME VIEWER MODAL ══════════════════ -->
+  <div id="resume-modal" class="resume-modal-overlay hidden">
+    <div class="resume-modal-window">
+      <!-- Modal Top Bar -->
+      <div class="resume-modal-header">
+        <div class="resume-modal-title">
+          <svg class="analyst-cap-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L1 18l1.71 1.71c1.31.61 2.75.97 4.29.97 5.52 0 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+          <span>KASHISH — RESUME PREVIEW</span>
+        </div>
+        <div class="resume-modal-actions">
+          <a href="https://view.officeapps.live.com/op/view.aspx?src=https://kashish-portfolio.vercel.app/Kashish_Resume.docx" target="_blank" class="resume-btn-secondary">
+            <span>FULL SCREEN VIEWER</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <a href="Kashish_Resume.docx" download="Kashish_Resume.docx" class="resume-btn-secondary">
+            <span>DOWNLOAD .DOCX</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>
+          <button class="resume-modal-close" onclick="closeResumeModal()" aria-label="Close modal">&times;</button>
+        </div>
+      </div>
+
+      <!-- Modal Body (Web Resume Formatted Preview) -->
+      <div class="resume-modal-body">
+        <div class="resume-sheet">
+          <!-- Header -->
+          <div class="resume-sheet-header">
+            <h1 class="resume-sheet-name">KASHISH</h1>
+            <p class="resume-sheet-tag">Tech &amp; Business Management Student blending data with hands-on growth marketing &amp; brand partnership experience.</p>
+            <div class="resume-sheet-links">
+              <span>+91 8130950944</span>
+              <span>&bull;</span>
+              <span>kashishine.mahak29@gmail.com</span>
+              <span>&bull;</span>
+              <span>LinkedIn</span>
+              <span>&bull;</span>
+              <span>Portfolio</span>
+            </div>
+          </div>
+
+          <!-- Section: Education -->
+          <div class="resume-sheet-section">
+            <h2 class="resume-sec-title">EDUCATION</h2>
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>PW Institute of Innovation</strong>
+                <span>Oct 2024 &ndash; Oct 2028</span>
+              </div>
+              <p class="resume-item-sub">UG in Tech &amp; Business Management</p>
+            </div>
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>Manipal University Jaipur</strong>
+                <span>Nov 2024 &ndash; Nov 2027</span>
+              </div>
+              <p class="resume-item-sub">Bachelor of Business Administration (BBA)</p>
+            </div>
+          </div>
+
+          <!-- Section: Skills -->
+          <div class="resume-sheet-section">
+            <h2 class="resume-sec-title">SKILLS</h2>
+            <div class="resume-skills-grid">
+              <div><strong>Data &amp; Analytics:</strong> Python (Pandas, NumPy, Matplotlib), Power BI (Intermediate), Advanced Excel (Pivot Tables, Modeling, Dashboards)</div>
+              <div><strong>Marketing &amp; Growth:</strong> Market Research, Competitor Analysis, Meta Ads Manager &amp; Reports</div>
+              <div><strong>Tools:</strong> Figma, Notion, Canva, AI Tools</div>
+              <div><strong>Core Strengths:</strong> Creative Problem-Solving, Cross-Functional Collaboration, Communication, Time Management</div>
+            </div>
+          </div>
+
+          <!-- Section: Experience -->
+          <div class="resume-sheet-section">
+            <h2 class="resume-sec-title">EXPERIENCE</h2>
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>Galvor (Viralwave Technologies Pvt Ltd)</strong>
+                <span>Mar 2026 &ndash; Apr 2026</span>
+              </div>
+              <p class="resume-item-sub">Growth Intern | Bengaluru, India (Hybrid)</p>
+              <ul class="resume-bullet-list">
+                <li>Supported the Growth team on 100+ brand and creator-partnership initiatives at Galvor's influencer-marketing platform.</li>
+                <li>Gained hands-on exposure to the creator economy and influencer-marketing workflows over the internship.</li>
+                <li>Contributed to partnership outreach, relationship management, and operational processes across multiple campaigns.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>BabyBillion Private Limited</strong>
+                <span>Dec 2025 &ndash; Jan 2026</span>
+              </div>
+              <p class="resume-item-sub">Business Development Intern | Bengaluru, India (In-Office)</p>
+              <ul class="resume-bullet-list">
+                <li>Partnered with the founder on business growth and brand-partnership strategy for India's #1 kids' YouTube channel.</li>
+                <li>Conducted market research to identify and prioritize potential national and international brand partners.</li>
+                <li>Executed outbound partner outreach, coordinated qualification, and served as the primary point of contact (POC) for partnerships.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Section: Projects -->
+          <div class="resume-sheet-section">
+            <h2 class="resume-sec-title">PROJECTS</h2>
+            
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>Digital Marketing &amp; MIS Spend Analysis</strong>
+                <span>Excel</span>
+              </div>
+              <p class="resume-desc">Analyzed MIS and digital ad-spend data to evaluate order-to-revenue conversion speed and QoQ channel efficiency and order-value trends. Built formulas, pivot tables, and charts in a dedicated analysis sheet, surfacing trends beyond baseline metrics.</p>
+            </div>
+
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>CLTV Cohort Analysis</strong>
+                <span>Excel</span>
+              </div>
+              <p class="resume-desc">Segmented customers into monthly sign-up cohorts and built a full retention analysis chart over time. Calculated revenue-based CLTV for the first cohort using order-level (Qty &times; Price) transaction data.</p>
+            </div>
+
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>Power BI Analytics Dashboard</strong>
+                <span>Power BI, Power Query</span>
+              </div>
+              <p class="resume-desc">Sourced a real-world Kaggle dataset; cleaned/transformed data with Power Query and built calculated measures. Designed an interactive dashboard (KPIs, trend/category visuals, slicers) and derived 5+ actionable insights with recommendations.</p>
+            </div>
+
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>Ad Wars: Brand Campaign Simulation</strong>
+                <span>Creative Lead</span>
+              </div>
+              <p class="resume-desc">Led creative direction and production of a campaign for boAt lifestyle with a 4-person team; developed visuals, storyboards, and messaging. Executed an organic social launch; recognized by external startup-ecosystem &amp; marketing leaders for creative quality.</p>
+            </div>
+
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>Proteino.online: Protein Cookie Brand</strong>
+                <span>Digital Marketing</span>
+              </div>
+              <p class="resume-desc">Researched market trends to position the brand for health-conscious consumers; launched a Shopify storefront. Owned the brand's Meta ad campaigns — using Meta Ads Manager reporting to analyze performance and guide spend.</p>
+            </div>
+
+            <div class="resume-item">
+              <div class="resume-item-top">
+                <strong>The Quirky Store</strong>
+                <span>Brand Strategist</span>
+              </div>
+              <p class="resume-desc">Managed sales, marketing, and team coordination during a 2-day live competition. Generated &#8377;23,000 in sales within 15 hours, securing 2nd place in profitability.</p>
+            </div>
+          </div>
+
+          <!-- Section: Fellowships, Certifications & Awards -->
+          <div class="resume-sheet-section">
+            <h2 class="resume-sec-title">FELLOWSHIPS, CERTIFICATIONS &amp; AWARDS</h2>
+            <ul class="resume-bullet-list">
+              <li><strong>Aspire Institute (Formerly Under Harvard University):</strong> Aspire Leadership Program Fellow (Cohort 5)</li>
+              <li><strong>Winner, Startup Resurrection (2025):</strong> Pitch competition; presented a turnaround strategy to mentors and investors</li>
+              <li><strong>Python Course:</strong> Scaler (Aug 2025)</li>
+              <li><strong>HR Immersion Training:</strong> PW / Physics Wallah (Apr 2025)</li>
+              <li><strong>Founder's Battleground &amp; SOS Volunteering:</strong> PW</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

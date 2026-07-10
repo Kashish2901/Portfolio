@@ -194,5 +194,38 @@
     creatorVideo.pause();
     creatorVideo.muted = true;
   }
+  /* ══════════════════════════════════════════
+     RESUME MODAL PREVIEW LOGIC
+  ══════════════════════════════════════════ */
+  window.openResumeModal = function() {
+    const modal = document.getElementById('resume-modal');
+    if (modal) {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  window.closeResumeModal = function() {
+    const modal = document.getElementById('resume-modal');
+    if (modal) {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  };
+
+  // Close modal when clicking on dark backdrop overlay
+  document.addEventListener('click', function(event) {
+    const modal = document.getElementById('resume-modal');
+    if (modal && event.target === modal) {
+      window.closeResumeModal();
+    }
+  });
+
+  // Close modal on Escape key press
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      window.closeResumeModal();
+    }
+  });
 
 })();
