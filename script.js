@@ -11,11 +11,13 @@
   const analystPage   = document.getElementById('analyst-page');
   const creatorPage   = document.getElementById('creator-page');
   const humanPage     = document.getElementById('human-page');
+  const connectPage   = document.getElementById('connect-page');
 
   const pages = {
     analyst: analystPage,
     creator: creatorPage,
     human: humanPage,
+    connect: connectPage,
     choose: choosePage
   };
 
@@ -102,7 +104,9 @@
     const newPage = pages[persona];
 
     // Store chosen persona (for future use)
-    sessionStorage.setItem('persona', persona);
+    if (persona !== 'connect') {
+      sessionStorage.setItem('persona', persona);
+    }
 
     // Pause and mute video when navigating AWAY from human page
     if (currentPageId === 'human' && humanVideo) {

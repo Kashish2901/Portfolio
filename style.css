@@ -3153,6 +3153,238 @@ html, body {
 }
 
 /* ═══════════════════════════════════════════════════════
+   CONNECT PAGE STYLES (MATCHING SHOWCASE STREAM DESIGN)
+═══════════════════════════════════════════════════════ */
+#connect-page {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: #000000;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.connect-bg-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65vw;
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.connect-bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.connect-bg-fade {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(90deg, #000000 0%, #000000 18%, rgba(0, 0, 0, 0.75) 45%, rgba(0, 0, 0, 0.25) 82%, transparent 100%),
+    linear-gradient(180deg, #000000 0%, transparent 15%, transparent 85%, #000000 100%);
+  pointer-events: none;
+}
+
+.connect-nav {
+  position: relative;
+  z-index: 10;
+  padding: 34px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-connect-back {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 9px 18px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.2s ease;
+}
+
+.btn-connect-back:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.connect-main-container {
+  position: relative;
+  z-index: 5;
+  padding: 20px 70px 60px;
+  max-width: 680px;
+}
+
+.connect-eyebrow {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 24px;
+}
+
+.connect-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 5.2vw, 76px);
+  line-height: 0.94;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.connect-red-dot {
+  color: var(--red);
+}
+
+.connect-title-underline {
+  width: 44px;
+  height: 3px;
+  background: var(--red);
+  margin: 18px 0 26px;
+  border-radius: 2px;
+}
+
+.connect-subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 440px;
+  margin-bottom: 36px;
+}
+
+.connect-btn-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 46px;
+  flex-wrap: wrap;
+}
+
+.btn-connect-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--red);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 13px 26px;
+  border-radius: 6px;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.btn-connect-primary:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+.btn-connect-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(18, 19, 28, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 13px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-connect-resume:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+.connect-cards-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(210px, 1fr));
+  gap: 20px;
+  max-width: 520px;
+}
+
+.connect-info-card {
+  position: relative;
+  background: rgba(14, 15, 22, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 22px 20px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.connect-info-card:hover {
+  border-color: rgba(229, 9, 20, 0.6);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+}
+
+.connect-card-icon-wrap {
+  margin-bottom: 12px;
+}
+
+.connect-card-label {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.connect-card-val {
+  font-family: var(--font-body);
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.75);
+  word-break: break-all;
+  line-height: 1.4;
+  margin-right: 18px;
+}
+
+.connect-card-arrow {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  color: var(--red);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .connect-bg-container {
+    width: 100vw;
+  }
+  .connect-nav, .connect-main-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .connect-cards-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
    INTERACTIVE RESUME VIEWER MODAL STYLES
 ═══════════════════════════════════════════════════════ */
 .resume-modal-overlay {
