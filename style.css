@@ -2730,8 +2730,9 @@ html, body {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+  object-position: center top;
   z-index: 0;
-  filter: brightness(0.42) contrast(1.1);
+  filter: brightness(0.55) contrast(1.08);
   pointer-events: none;
 }
 
