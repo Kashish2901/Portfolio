@@ -3168,7 +3168,7 @@ html, body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 65vw;
+  width: 72vw;
   height: 100vh;
   z-index: 1;
   overflow: hidden;
@@ -3180,14 +3180,15 @@ html, body {
   object-fit: cover;
   object-position: center center;
   display: block;
+  filter: brightness(1.35) contrast(1.1);
 }
 
 .connect-bg-fade {
   position: absolute;
   inset: 0;
   background: 
-    linear-gradient(90deg, #000000 0%, #000000 18%, rgba(0, 0, 0, 0.75) 45%, rgba(0, 0, 0, 0.25) 82%, transparent 100%),
-    linear-gradient(180deg, #000000 0%, transparent 15%, transparent 85%, #000000 100%);
+    linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.85) 15%, rgba(0, 0, 0, 0.25) 35%, transparent 60%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, transparent 12%, transparent 88%, rgba(0, 0, 0, 0.4) 100%);
   pointer-events: none;
 }
 
