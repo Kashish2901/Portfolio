@@ -3195,7 +3195,7 @@ html, body {
 .connect-nav {
   position: relative;
   z-index: 10;
-  padding: 34px 70px;
+  padding: 22px 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -3207,7 +3207,7 @@ html, body {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  padding: 9px 18px;
+  padding: 8px 16px;
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   transition: all 0.2s ease;
@@ -3222,23 +3222,23 @@ html, body {
 .connect-main-container {
   position: relative;
   z-index: 5;
-  padding: 20px 70px 60px;
-  max-width: 680px;
+  padding: 10px 70px 30px;
+  max-width: 600px;
 }
 
 .connect-eyebrow {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.16em;
   color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .connect-hero-title {
   font-family: var(--font-display);
-  font-size: clamp(52px, 5.2vw, 76px);
-  line-height: 0.94;
+  font-size: clamp(38px, 3.8vw, 54px);
+  line-height: 0.96;
   font-weight: 900;
   color: #ffffff;
   text-transform: uppercase;
@@ -3253,38 +3253,38 @@ html, body {
   width: 44px;
   height: 3px;
   background: var(--red);
-  margin: 18px 0 26px;
+  margin: 14px 0 18px;
   border-radius: 2px;
 }
 
 .connect-subtitle {
   font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 15px;
+  line-height: 1.55;
   color: rgba(255, 255, 255, 0.88);
   max-width: 440px;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
 }
 
 .connect-btn-row {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 46px;
+  gap: 14px;
+  margin-bottom: 26px;
   flex-wrap: wrap;
 }
 
 .btn-connect-primary {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   background: var(--red);
   color: #ffffff;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  padding: 13px 26px;
+  padding: 11px 22px;
   border-radius: 6px;
   transition: background 0.25s ease, transform 0.2s ease;
 }
@@ -3297,14 +3297,14 @@ html, body {
 .btn-connect-resume {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   background: rgba(18, 19, 28, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: #ffffff;
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  padding: 13px 24px;
+  padding: 11px 20px;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.25s ease;
@@ -3318,9 +3318,9 @@ html, body {
 
 .connect-cards-row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(210px, 1fr));
-  gap: 20px;
-  max-width: 520px;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 16px;
+  max-width: 480px;
 }
 
 .connect-info-card {
@@ -3328,7 +3328,7 @@ html, body {
   background: rgba(14, 15, 22, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
-  padding: 22px 20px;
+  padding: 16px 18px;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -3342,7 +3342,7 @@ html, body {
 }
 
 .connect-card-icon-wrap {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .connect-card-label {
