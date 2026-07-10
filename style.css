@@ -2966,16 +2966,32 @@ html, body {
 }
 
 .hm-story-visual {
-  height: 250px;
-  border-radius: 12px;
+  height: 320px;
+  border-radius: 14px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: radial-gradient(circle at 50% 60%, #ff6b35 0%, #9e2a2b 45%, #1e1828 85%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #111319;
   position: relative;
   display: flex;
   align-items: flex-end;
   padding: 16px;
-  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.hm-story-visual-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  z-index: 1;
+  transition: transform 0.5s ease;
+}
+
+.hm-story-visual:hover .hm-story-visual-img {
+  transform: scale(1.04);
 }
 
 .hm-story-visual-caption {
@@ -2985,9 +3001,12 @@ html, body {
   font-weight: 700;
   color: #fff;
   background: rgba(10, 11, 18, 0.75);
-  padding: 5px 10px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 6px 12px;
   border-radius: 6px;
   letter-spacing: 0.06em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* ── Drivers List ── */
