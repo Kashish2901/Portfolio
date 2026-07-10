@@ -1002,6 +1002,15 @@
   <!-- ══════════════════ THE HUMAN PAGE ══════════════════ -->
   <div id="human-page" class="persona-page page-hidden">
     
+    <!-- Background Video for The Human Page -->
+    <video id="human-bg-video" class="human-bg-video" loop playsinline src="human-bg.mp4"></video>
+    <div class="human-video-overlay"></div>
+
+    <!-- Floating Sound Toggle Button -->
+    <button id="human-sound-btn" class="analyst-sound-toggle" onclick="toggleHumanSound()">
+      <span>🔊 MUSIC ON</span>
+    </button>
+
     <!-- Top Navbar -->
     <nav class="analyst-top-nav">
       <div class="analyst-brand" onclick="switchProfile('choose')">
@@ -1049,60 +1058,6 @@
               <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M8 5v14l11-7z"/></svg>
               PLAY MY STORY
             </a>
-          </div>
-        </div>
-
-        <!-- Center Visual Window -->
-        <div>
-          <div class="human-window-frame">
-            <div class="human-window-silhouette"></div>
-            <div class="human-window-content">
-              <span class="human-window-tag">AIRPLANE WINDOW PERSPECTIVE</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Chapter Menu -->
-        <div class="human-chapter-menu">
-          <a href="#human-story" class="hm-chapter-item">
-            <span class="hm-chap-icon">❤️</span>
-            <span>My Story</span>
-          </a>
-          <a href="#human-passions" class="hm-chapter-item">
-            <span class="hm-chap-icon">💃</span>
-            <span>Dance</span>
-          </a>
-          <a href="#human-passions" class="hm-chapter-item">
-            <span class="hm-chap-icon">👨‍👩‍👧‍👦</span>
-            <span>My People</span>
-          </a>
-          <a href="#human-passions" class="hm-chapter-item">
-            <span class="hm-chap-icon">✈️</span>
-            <span>Travel Diaries</span>
-          </a>
-          <a href="#human-passions" class="hm-chapter-item">
-            <span class="hm-chap-icon">📚</span>
-            <span>Books &amp; Learning</span>
-          </a>
-          <a href="#human-passions" class="hm-chapter-item">
-            <span class="hm-chap-icon">💡</span>
-            <span>Values &amp; Beliefs</span>
-          </a>
-          <a href="#human-passions" class="hm-chapter-item">
-            <span class="hm-chap-icon">💬</span>
-            <span>Lessons &amp; Failures</span>
-          </a>
-          <a href="#human-passions" class="hm-chapter-item">
-            <span class="hm-chap-icon">🎥</span>
-            <span>100 People 100 Stories</span>
-          </a>
-
-          <div class="hm-chapter-dashes">
-            <span class="hm-dash active"></span>
-            <span class="hm-dash"></span>
-            <span class="hm-dash"></span>
-            <span class="hm-dash"></span>
-            <span class="hm-dash"></span>
           </div>
         </div>
 

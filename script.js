@@ -86,6 +86,7 @@
   const heroVideo = document.getElementById('hero-video');
   const creatorVideo = document.getElementById('creator-hero-video');
   const analystVideo = document.getElementById('analyst-video');
+  const humanVideo = document.getElementById('human-bg-video');
 
   window.goToPage = function (persona) {
     switchProfile(persona);
@@ -104,6 +105,10 @@
     sessionStorage.setItem('persona', persona);
 
     // Pause and mute video when navigating AWAY from human page
+    if (currentPageId === 'human' && humanVideo) {
+      humanVideo.pause();
+      humanVideo.muted = true;
+    }
     if (currentPageId === 'human' && heroVideo) {
       heroVideo.pause();
       heroVideo.muted = true;
@@ -140,26 +145,25 @@
         document.body.style.overflow = 'hidden';
       }
 
-      // Play video with sound ONLY when navigating TO human page
-      if (persona === 'human' && heroVideo) {
-        if (!heroVideo.getAttribute('src')) {
-          heroVideo.setAttribute('src', 'background-video.mp4');
+      // Play background video WITH MUSIC when navigating TO human page
+      if (persona === 'human' && humanVideo) {
+        if (!humanVideo.getAttribute('src')) {
+          humanVideo.setAttribute('src', 'human-bg.mp4');
         }
-        heroVideo.currentTime = 0;
-        heroVideo.muted = false;
-        heroVideo.play().catch(() => {});
+        humanVideo.currentTime = 0;
+        humanVideo.muted = false;
+        humanVideo.volume = 0.85;
+        const humanSoundBtn = document.getElementById('human-sound-btn');
+        if (humanSoundBtn) humanSoundBtn.innerHTML = '<span>🔊 MUSIC ON</span>';
+        humanVideo.play().catch(() => {});
       }
 
-      // Play background video WITH MUSIC when navigating TO creator page
+      // Play video ONLY when navigating TO creator page
       if (persona === 'creator' && creatorVideo) {
         if (!creatorVideo.getAttribute('src')) {
           creatorVideo.setAttribute('src', 'creator-bg.mp4');
         }
         creatorVideo.currentTime = 0;
-        creatorVideo.muted = false;
-        creatorVideo.volume = 0.85;
-        const soundBtn = document.getElementById('creator-sound-btn');
-        if (soundBtn) soundBtn.innerHTML = '<span>🔊 MUSIC ON</span>';
         creatorVideo.play().catch(() => {});
       }
 
@@ -237,9 +241,9 @@
     }
   };
 
-  window.toggleCreatorAudio = function() {
-    const video = document.getElementById('creator-hero-video');
-    const btn = document.getElementById('creator-sound-btn');
+  window.toggleHumanSound = function() {
+    const video = document.getElementById('human-bg-video');
+    const btn = document.getElementById('human-sound-btn');
     if (!video || !btn) return;
     if (video.muted) {
       video.muted = false;
