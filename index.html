@@ -556,6 +556,10 @@
   <!-- ══════════════════ THE CREATOR PAGE ══════════════════ -->
   <div id="creator-page" class="persona-page page-hidden">
     
+    <!-- Background Video for The Creator Page -->
+    <video id="creator-hero-video" class="creator-bg-video" loop playsinline muted src="creator-bg.mp4"></video>
+    <div class="creator-video-overlay"></div>
+
     <!-- Top Navbar -->
     <nav class="analyst-top-nav">
       <div class="analyst-brand" onclick="switchProfile('choose')">
@@ -580,39 +584,417 @@
       </div>
     </nav>
 
-    <section class="persona-hero">
-      <div class="persona-hero-bg">
-        <video id="creator-hero-video" class="hero-video-bg" loop playsinline muted src="creator-video.mp4"></video>
+    <!-- ─── Creator Hero Section ─── -->
+    <section class="creator-hero-section">
+      <div class="creator-hero-grid">
+        
+        <!-- Left Content -->
+        <div class="creator-hero-left">
+          <div class="analyst-eyebrow">
+            <span class="eyebrow-text">THE CREATOR</span>
+          </div>
+
+          <h1 class="analyst-main-title">
+            TURNING IDEAS<br />INTO CONTENT THAT<br />CONNECTS<span class="title-red-dot">.</span>
+          </h1>
+
+          <p class="analyst-main-subtitle">
+            I use creativity, marketing, and storytelling to build brands, run campaigns, and create content that captures attention and drives action.
+          </p>
+
+          <div class="analyst-btn-row">
+            <a href="#creator-projects" class="btn-view-dashboards">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M8 5v14l11-7z"/></svg>
+              WATCH SHOWREEL
+            </a>
+            <a href="#creator-projects" class="btn-outline-dark">
+              VIEW MY WORK
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Stats Column -->
+        <div class="creator-hero-stats">
+          <div class="cr-stat-item">
+            <span class="cr-stat-icon">💡</span>
+            <div class="cr-stat-content">
+              <span class="cr-stat-num">100+</span>
+              <span class="cr-stat-label">Ideas Turned Into Content</span>
+            </div>
+          </div>
+          <div class="cr-stat-item">
+            <span class="cr-stat-icon">🎬</span>
+            <div class="cr-stat-content">
+              <span class="cr-stat-num">250+</span>
+              <span class="cr-stat-label">Content Pieces Created</span>
+            </div>
+          </div>
+          <div class="cr-stat-item">
+            <span class="cr-stat-icon">📢</span>
+            <div class="cr-stat-content">
+              <span class="cr-stat-num" style="font-size: 18px; color: #fff;">Campaigns Executed</span>
+            </div>
+          </div>
+          <div class="cr-stat-item">
+            <span class="cr-stat-icon">📈</span>
+            <div class="cr-stat-content">
+              <span class="cr-stat-num" style="font-size: 18px; color: #fff;">Brands Collaborated</span>
+            </div>
+          </div>
+          <div class="cr-stat-dashes">
+            <span class="cr-dash active"></span>
+            <span class="cr-dash"></span>
+            <span class="cr-dash"></span>
+            <span class="cr-dash"></span>
+          </div>
+        </div>
+
       </div>
-      <div class="hero-vignette"></div>
-      <div class="human-hero-content">
-        <p class="hero-eyebrow">INTRODUCING</p>
-        <h1 class="hero-title">Kashish<br>The Creator</h1>
-        <p class="hero-subtitle">Ideas need a voice.<br><b>I give them one.</b></p>
-        <div class="hero-buttons">
-          <button class="btn-play">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            View creations
-          </button>
-          <button class="btn-more">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-            More About Me
+    </section>
+
+    <!-- ─── EXPERIENCE SECTION ─── -->
+    <section class="analyst-section creator-experience-section">
+      <div class="analyst-sec-header">
+        <h3 class="analyst-sec-heading">EXPERIENCE</h3>
+        <a href="#" onclick="openResumeModal(); return false;" class="sec-header-link">VIEW FULL EXPERIENCE &rarr;</a>
+      </div>
+
+      <div class="creator-exp-grid">
+        <!-- Card 1: Galvor -->
+        <div class="creator-exp-card">
+          <div>
+            <div class="creator-exp-top">
+              <div>
+                <div class="cr-company-logo">galvor</div>
+                <div class="cr-exp-role">Growth Intern</div>
+                <div class="cr-exp-meta">Mar 2026 - Apr 2026 &nbsp;|&nbsp; Bengaluru, India (Hybrid)</div>
+              </div>
+            </div>
+
+            <ul class="creator-exp-bullets" style="margin-top: 20px;">
+              <li>
+                <span class="check-red">✔</span>
+                <span>Supported the Growth team on 100+ brand and creator-partnership initiatives at Galvor's influencer-marketing platform.</span>
+              </li>
+              <li>
+                <span class="check-red">✔</span>
+                <span>Gained hands-on exposure to the creator economy and influencer-marketing workflows over the internship.</span>
+              </li>
+              <li>
+                <span class="check-red">✔</span>
+                <span>Contributed to partnership outreach, relationship management, and operational processes across multiple campaigns.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="creator-exp-tools">
+            <span class="cr-tools-label">TOOLS USED:</span>
+            <span class="cr-tool-pill">Research</span>
+            <span class="cr-tool-pill">CRM</span>
+            <span class="cr-tool-pill">Communication</span>
+          </div>
+        </div>
+
+        <!-- Card 2: BabyBillion -->
+        <div class="creator-exp-card">
+          <div>
+            <div class="creator-exp-top">
+              <div>
+                <div class="cr-company-logo pink">BABY BILLION</div>
+                <div class="cr-exp-role">Business Development Intern</div>
+                <div class="cr-exp-meta">Dec 2025 - Jan 2026 &nbsp;|&nbsp; Bengaluru, India (In-Office)</div>
+              </div>
+            </div>
+
+            <ul class="creator-exp-bullets" style="margin-top: 20px;">
+              <li>
+                <span class="check-red">✔</span>
+                <span>Partnered with the founder on business growth and brand-partnership strategy for India's #1 kids' YouTube channel.</span>
+              </li>
+              <li>
+                <span class="check-red">✔</span>
+                <span>Conducted market research to identify and prioritize potential national and international brand partners.</span>
+              </li>
+              <li>
+                <span class="check-red">✔</span>
+                <span>Executed outbound partner outreach, coordinated qualification, and served as the primary point of contact (POC) for partnerships.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="creator-exp-tools">
+            <span class="cr-tools-label">TOOLS USED:</span>
+            <span class="cr-tool-pill">Notion</span>
+            <span class="cr-tool-pill">Excel</span>
+            <span class="cr-tool-pill">Research</span>
+            <span class="cr-tool-pill">CRM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── FEATURED CAMPAIGNS & PROJECTS ─── -->
+    <section id="creator-projects" class="analyst-section creator-projects-section">
+      <div class="analyst-sec-header">
+        <h3 class="analyst-sec-heading">FEATURED CAMPAIGNS &amp; PROJECTS</h3>
+        <a href="#creator-projects" class="sec-header-link">VIEW ALL PROJECTS &rarr;</a>
+      </div>
+
+      <div class="creator-projects-grid">
+        <!-- Project 1: boAt -->
+        <div class="cr-project-card">
+          <div class="cr-project-thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" width="64" height="64"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            <span class="cr-project-badge">Creative Lead</span>
+          </div>
+          <div class="cr-project-body">
+            <div>
+              <h4 class="cr-project-title">Ad Wars: Brand Campaign Simulation</h4>
+              <p class="cr-project-desc">Led a campaign for boAt lifestyle with a 4-person team. Developed visuals, storyboards, and messaging. Executed organic social launch. Recognized by startup ecosystem &amp; marketing leaders for creative quality.</p>
+            </div>
+            <div class="cr-project-tags">
+              <span class="cr-tool-pill">Campaign Strategy</span>
+              <span class="cr-tool-pill">Creative Production</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Proteino -->
+        <div class="cr-project-card">
+          <div class="cr-project-thumb" style="background: radial-gradient(circle at center, #3a2212 0%, #17110e 100%);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,180,100,0.3)" stroke-width="1.5" width="64" height="64"><circle cx="12" cy="12" r="10"/><circle cx="8" cy="10" r="1" fill="rgba(255,180,100,0.4)"/><circle cx="15" cy="9" r="1" fill="rgba(255,180,100,0.4)"/><circle cx="11" cy="15" r="1.5" fill="rgba(255,180,100,0.4)"/></svg>
+            <span class="cr-project-badge">Digital Marketing</span>
+          </div>
+          <div class="cr-project-body">
+            <div>
+              <h4 class="cr-project-title">Proteino.online: Protein Cookie Brand</h4>
+              <p class="cr-project-desc">Researched market trends to position the brand for health-conscious consumers. Launched a Shopify storefront. Owned Meta ad campaigns and analyzed performance using Meta Ads Manager reports.</p>
+            </div>
+            <div class="cr-project-tags">
+              <span class="cr-tool-pill">Meta Ads</span>
+              <span class="cr-tool-pill">Shopify</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Quirky Store -->
+        <div class="cr-project-card">
+          <div class="cr-project-thumb" style="background: radial-gradient(circle at center, #2e1c3a 0%, #15111c 100%);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(200,140,255,0.3)" stroke-width="1.5" width="64" height="64"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+            <span class="cr-project-badge">Brand Strategist</span>
+          </div>
+          <div class="cr-project-body">
+            <div>
+              <h4 class="cr-project-title">The Quirky Store Business Challenge</h4>
+              <p class="cr-project-desc">Managed sales, marketing, and team coordination during a 2-day live competition. Generated ₹23,000 in sales within 15 hours. Secured 2nd place in profitability.</p>
+            </div>
+            <div class="cr-project-tags">
+              <span class="cr-tool-pill">Sales</span>
+              <span class="cr-tool-pill">Marketing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CREATOR TOOLKIT ─── -->
+    <section class="analyst-section creator-toolkit-section">
+      <h3 class="analyst-sec-heading">CREATOR TOOLKIT</h3>
+      <div class="cr-toolkit-grid">
+        <div class="cr-toolkit-card">
+          <svg viewBox="0 0 24 24" fill="#00C4CC" width="28" height="28"><circle cx="12" cy="12" r="10"/><path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="#fff" stroke-width="2" fill="none"/></svg>
+          <div class="cr-tk-name">Canva</div>
+          <div class="cr-tk-cat">Designs &amp; Visuals</div>
+        </div>
+        <div class="cr-toolkit-card">
+          <svg viewBox="0 0 24 24" fill="#F24E1E" width="28" height="28"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/></svg>
+          <div class="cr-tk-name">Figma</div>
+          <div class="cr-tk-cat">UI/Creative Design</div>
+        </div>
+        <div class="cr-toolkit-card">
+          <svg viewBox="0 0 24 24" fill="#ffffff" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="3" fill="#111"/><path d="M8 7h3l5 8V7h2v10h-3l-5-8v8H8V7z" fill="#fff"/></svg>
+          <div class="cr-tk-name">Notion</div>
+          <div class="cr-tk-cat">Planning &amp; Organization</div>
+        </div>
+        <div class="cr-toolkit-card">
+          <svg viewBox="0 0 24 24" fill="#1877F2" width="28" height="28"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.99 3.66 9.12 8.44 9.88v-6.99H7.9v-2.89h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v6.99C18.34 21.12 22 16.99 22 12c0-5.52-4.48-10-10-10z"/></svg>
+          <div class="cr-tk-name">Meta Ads Manager</div>
+          <div class="cr-tk-cat">Campaigns &amp; Reporting</div>
+        </div>
+        <div class="cr-toolkit-card">
+          <svg viewBox="0 0 24 24" fill="#ffffff" width="28" height="28"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <div class="cr-tk-name">CapCut</div>
+          <div class="cr-tk-cat">Video Editing &amp; Reels</div>
+        </div>
+        <div class="cr-toolkit-card">
+          <svg viewBox="0 0 24 24" fill="#10A37F" width="28" height="28"><path d="M22.28 9.82c-.34-1.92-1.6-3.52-3.41-4.22-.84-.33-1.76-.44-2.67-.32C15.42 3.32 13.56 2 11.48 2 8.72 2 6.38 3.93 5.86 6.64c-1.81.7-3.07 2.3-3.41 4.22-.36 2.01.2 4.08 1.54 5.61-.78 1.96-.34 4.27 1.18 5.76 1.52 1.49 3.82 1.93 5.78 1.15 1.53 1.34 3.6 1.9 5.61 1.54 1.92-.34 3.52-1.6 4.22-3.41.33-.84.44-1.76.32-2.67 1.96-.78 3.32-2.64 3.32-4.72 0-1.75-.82-3.37-2.14-4.3z"/></svg>
+          <div class="cr-tk-name">ChatGPT</div>
+          <div class="cr-tk-cat">Ideas &amp; Content Assistance</div>
+        </div>
+        <div class="cr-toolkit-card">
+          <svg viewBox="0 0 24 24" fill="#4285F4" width="28" height="28"><polygon points="12 2 2 19 22 19" fill="#4285F4"/></svg>
+          <div class="cr-tk-name">Google Drive</div>
+          <div class="cr-tk-cat">Storage &amp; Collaboration</div>
+        </div>
+        <div class="cr-toolkit-card">
+          <svg viewBox="0 0 24 24" fill="#95BF47" width="28" height="28"><path d="M18.8 6.4c-.1-.2-.4-.3-.7-.4-.3-.1-1.3-.1-1.3-.1s-.9-.8-1.2-1.1c-.3-.3-.9-.2-1-.2-.2 0-1.6.1-2.9.2C10.5 4.9 9 5 8.9 5c-.3 0-.5.2-.6.4C8.2 5.8 7.3 8.3 7.3 8.3L6 8.5s-.6.1-.7.6c0 .2.2.6.4.8l8.3 10.7c.3.4.9.4 1.2 0l4.5-12.7c.1-.5-.9-1.5-.9-1.5z"/></svg>
+          <div class="cr-tk-name">Shopify</div>
+          <div class="cr-tk-cat">Storefront Management</div>
+        </div>
+        <div class="cr-toolkit-card">
+          <svg viewBox="0 0 24 24" fill="#FF0000" width="28" height="28"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <div class="cr-tk-name">YouTube Studio</div>
+          <div class="cr-tk-cat">Channel Management</div>
+        </div>
+        <div class="cr-toolkit-card">
+          <svg viewBox="0 0 24 24" fill="#E4405F" width="28" height="28"><rect x="2" y="2" width="20" height="20" rx="6" fill="none" stroke="#E4405F" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="#E4405F" stroke-width="2"/><circle cx="18" cy="6" r="1.2" fill="#E4405F"/></svg>
+          <div class="cr-tk-name">Instagram</div>
+          <div class="cr-tk-cat">Content &amp; Community</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 3-COLUMN MIDDLE BLOCK ─── -->
+    <section class="analyst-section">
+      <div class="cr-three-col-grid">
+        <!-- Col 1: CORE SKILLS -->
+        <div class="cr-col-box">
+          <h4 class="analyst-sec-heading" style="margin-bottom: 8px;">CORE SKILLS</h4>
+          <ul class="cr-skills-list">
+            <li><span class="check-red">✔</span> Content Strategy &amp; Storytelling</li>
+            <li><span class="check-red">✔</span> Branding &amp; Positioning</li>
+            <li><span class="check-red">✔</span> Social Media Marketing</li>
+            <li><span class="check-red">✔</span> Meta Ads Manager &amp; Reports</li>
+            <li><span class="check-red">✔</span> Creative Direction &amp; Design</li>
+            <li><span class="check-red">✔</span> Team Collaboration &amp; Leadership</li>
+            <li><span class="check-red">✔</span> Communication &amp; Presentation</li>
+          </ul>
+        </div>
+
+        <!-- Col 2: IMPACT SNAPSHOT -->
+        <div class="cr-col-box">
+          <h4 class="analyst-sec-heading" style="margin-bottom: 8px;">IMPACT SNAPSHOT</h4>
+          <div class="cr-impact-grid">
+            <div class="cr-impact-card">
+              <div class="cr-impact-val">100+</div>
+              <div class="cr-impact-lbl">Ideas &amp; Campaign Concepts</div>
+            </div>
+            <div class="cr-impact-card">
+              <div class="cr-impact-val">250+</div>
+              <div class="cr-impact-lbl">Content Pieces Created</div>
+            </div>
+            <div class="cr-impact-card">
+              <div class="cr-impact-val">₹23K</div>
+              <div class="cr-impact-lbl">Revenue Generated (The Quirky Store)</div>
+            </div>
+            <div class="cr-impact-card">
+              <div class="cr-impact-val">2</div>
+              <div class="cr-impact-lbl">Brands Built &amp; Marketed</div>
+            </div>
+            <div class="cr-impact-card">
+              <div class="cr-impact-val">1</div>
+              <div class="cr-impact-lbl">Recognition for Creative Quality</div>
+            </div>
+            <div class="cr-impact-card">
+              <div class="cr-impact-val">∞</div>
+              <div class="cr-impact-lbl">Stories That Inspire</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 3: WHAT I BELIEVE -->
+        <div class="cr-col-box" style="justify-content: space-between;">
+          <div>
+            <h4 class="analyst-sec-heading" style="margin-bottom: 16px;">WHAT I BELIEVE</h4>
+            <p class="cr-quote-text">
+              “Good content isn't just about views — it's about value, emotion and connection.”
+            </p>
+          </div>
+          <div class="cr-quote-author">
+            - Kashish
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 2-COLUMN BOTTOM BLOCK ─── -->
+    <section class="analyst-section">
+      <div class="cr-two-col-grid">
+        <!-- Col 1: EDUCATION -->
+        <div class="cr-col-box">
+          <h4 class="analyst-sec-heading" style="margin-bottom: 12px;">EDUCATION</h4>
+          <div class="cr-edu-list">
+            <div class="cr-edu-item">
+              <div class="cr-edu-icon">PW</div>
+              <div>
+                <div style="font-weight: 700; color: #fff; font-size: 15px;">PW Institute of Innovation</div>
+                <div style="color: var(--red); font-size: 13px; font-weight: 600; margin: 2px 0;">UG in Tech &amp; Business Management</div>
+                <div style="color: rgba(255,255,255,0.5); font-size: 12px;">Oct 2024 - Oct 2028</div>
+              </div>
+            </div>
+            <div class="cr-edu-item">
+              <div class="cr-edu-icon" style="background: rgba(229,9,20,0.15); color: var(--red);">MUJ</div>
+              <div>
+                <div style="font-weight: 700; color: #fff; font-size: 15px;">Manipal University Jaipur</div>
+                <div style="color: var(--red); font-size: 13px; font-weight: 600; margin: 2px 0;">Bachelor of Business Administration</div>
+                <div style="color: rgba(255,255,255,0.5); font-size: 12px;">Nov 2024 - Nov 2027</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: CERTIFICATIONS & AWARDS -->
+        <div class="cr-col-box">
+          <h4 class="analyst-sec-heading" style="margin-bottom: 12px;">CERTIFICATIONS &amp; AWARDS</h4>
+          <div class="cr-awards-grid">
+            <div class="cr-award-card">
+              <span style="font-size: 24px;">🏆</span>
+              <div style="font-weight: 700; color: #fff; font-size: 13.5px;">Winner Startup Resurrection (2025)</div>
+              <div style="font-size: 11.5px; color: rgba(255,255,255,0.6);">Pitch competition; presented a turnaround strategy to mentors and investors</div>
+            </div>
+            <div class="cr-award-card">
+              <span style="font-size: 24px;">🎓</span>
+              <div style="font-weight: 700; color: #fff; font-size: 13.5px;">Aspire Leadership Program, Fellow (Cohort 5)</div>
+              <div style="font-size: 11.5px; color: rgba(255,255,255,0.6);">Aspire Institute (Formerly Under Harvard University)</div>
+            </div>
+            <div class="cr-award-card">
+              <span style="font-size: 24px;">🐍</span>
+              <div style="font-weight: 700; color: #fff; font-size: 13.5px;">Python Course Scaler</div>
+              <div style="font-size: 11.5px; color: rgba(255,255,255,0.6);">Aug 2025</div>
+            </div>
+            <div class="cr-award-card">
+              <span style="font-size: 24px;">👥</span>
+              <div style="font-weight: 700; color: #fff; font-size: 13.5px;">HR Immersion Training</div>
+              <div style="font-size: 11.5px; color: rgba(255,255,255,0.6);">PW / Physics Wallah &bull; Apr 2025</div>
+            </div>
+            <div class="cr-award-card">
+              <span style="font-size: 24px;">🎖️</span>
+              <div style="font-weight: 700; color: #fff; font-size: 13.5px;">Founder's Battleground</div>
+              <div style="font-size: 11.5px; color: rgba(255,255,255,0.6);">PW SOS Volunteering Certificate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── NEXT EPISODE BANNER (NETFLIX STYLE) ─── -->
+    <section class="analyst-section next-episode-section">
+      <div class="next-episode-card">
+        <div class="next-ep-left">
+          <span class="next-ep-tag">NEXT EPISODE</span>
+          <h2 class="next-ep-title">THE HUMAN</h2>
+          <p class="next-ep-subtitle">Get to know the person behind the work.</p>
+        </div>
+        <div class="next-ep-right">
+          <button class="btn-continue-watching" onclick="switchProfile('human')">
+            <span>CONTINUE WATCHING</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </button>
         </div>
       </div>
     </section>
 
-    <section class="human-section">
-      <h3 class="section-title">Creative Projects</h3>
-      <div class="carousel-container">
-        <div class="carousel-track">
-          <div class="project-card" style="background: linear-gradient(45deg, #2d0a0a, #c0392b);"><h4>Brand Identity</h4></div>
-          <div class="project-card" style="background: linear-gradient(45deg, #3d0c0c, #e74c3c);"><h4>Video Production</h4></div>
-          <div class="project-card" style="background: linear-gradient(45deg, #4a1010, #d35400);"><h4>Social Media</h4></div>
-          <div class="project-card" style="background: linear-gradient(45deg, #1a0505, #922b21);"><h4>Photography</h4></div>
-        </div>
-      </div>
-    </section>
   </div>
   <!-- ══════════════════ END THE CREATOR PAGE ══════════════════ -->
 

@@ -153,7 +153,7 @@
       // Play video ONLY when navigating TO creator page
       if (persona === 'creator' && creatorVideo) {
         if (!creatorVideo.getAttribute('src')) {
-          creatorVideo.setAttribute('src', 'creator-video.mp4');
+          creatorVideo.setAttribute('src', 'creator-bg.mp4');
         }
         creatorVideo.currentTime = 0;
         creatorVideo.play().catch(() => {});

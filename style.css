@@ -2214,6 +2214,506 @@ html, body {
 
 
 /* ═══════════════════════════════════════════════════════
+   THE CREATOR COMPREHENSIVE FULL-PAGE STYLES
+═══════════════════════════════════════════════════════ */
+.creator-bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.creator-video-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 8, 14, 0.85) 0%, rgba(8, 8, 14, 0.75) 40%, rgba(8, 8, 14, 0.95) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+#creator-page > nav,
+#creator-page > section,
+#creator-page > .creator-hero-section {
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Creator Hero Section ── */
+.creator-hero-section {
+  padding: 60px 50px 40px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.creator-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 50px;
+  align-items: center;
+}
+
+.creator-hero-left {
+  max-width: 850px;
+  text-align: left;
+}
+
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 13px 24px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-dark:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.creator-hero-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 24px 28px;
+  background: rgba(14, 15, 22, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(16px);
+}
+
+.cr-stat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cr-stat-item:last-of-type {
+  border-bottom: none;
+  padding-bottom: 8px;
+}
+
+.cr-stat-icon {
+  font-size: 22px;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.cr-stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cr-stat-num {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--red);
+  line-height: 1.1;
+}
+
+.cr-stat-label {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.35;
+}
+
+.cr-stat-dashes {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.cr-dash {
+  flex: 1;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 2px;
+}
+
+.cr-dash.active {
+  background: var(--red);
+}
+
+/* ── Creator Experience Cards ── */
+.creator-exp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.creator-exp-card {
+  background: rgba(16, 17, 24, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.creator-exp-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(229, 9, 20, 0.4);
+}
+
+.creator-exp-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.cr-company-logo {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 900;
+  color: #a855f7;
+  letter-spacing: -0.03em;
+}
+
+.cr-company-logo.pink {
+  color: #ec4899;
+}
+
+.cr-exp-role {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--red);
+  margin: 4px 0 2px;
+}
+
+.cr-exp-meta {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.creator-exp-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.creator-exp-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+.creator-exp-bullets li .check-red {
+  color: var(--red);
+  font-weight: 900;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.creator-exp-tools {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.cr-tools-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.1em;
+  margin-right: 4px;
+}
+
+.cr-tool-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ── Creator Featured Campaigns & Projects ── */
+.creator-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cr-project-card {
+  background: rgba(16, 17, 24, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.cr-project-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(229, 9, 20, 0.45);
+}
+
+.cr-project-thumb {
+  height: 180px;
+  background: radial-gradient(circle at center, #242838 0%, #11131c 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cr-project-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: var(--red);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cr-project-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cr-project-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.cr-project-desc {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.55;
+}
+
+.cr-project-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ── Creator Toolkit ── */
+.cr-toolkit-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 14px;
+}
+
+.cr-toolkit-card {
+  background: rgba(18, 19, 28, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.cr-toolkit-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(28, 30, 44, 0.85);
+}
+
+.cr-tk-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 4px;
+}
+
+.cr-tk-cat {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.25;
+}
+
+/* ── 3-Column Middle Block ── */
+.cr-three-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.cr-col-box {
+  background: rgba(16, 17, 24, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cr-skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cr-skills-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.cr-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.cr-impact-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+}
+
+.cr-impact-val {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--red);
+}
+
+.cr-impact-lbl {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+}
+
+.cr-quote-text {
+  font-size: 18px;
+  line-height: 1.6;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cr-quote-author {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--red);
+  margin-top: 12px;
+}
+
+/* ── 2-Column Bottom Block ── */
+.cr-two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 30px;
+}
+
+.cr-edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cr-edu-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.cr-edu-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 16px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.cr-awards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.cr-award-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 1400px) {
+  .cr-toolkit-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .creator-projects-grid,
+  .cr-three-col-grid {
+    grid-template-columns: 1fr;
+  }
+  .creator-hero-grid,
+  .creator-exp-grid,
+  .cr-two-col-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
    INTERACTIVE RESUME VIEWER MODAL STYLES
 ═══════════════════════════════════════════════════════ */
 .resume-modal-overlay {
