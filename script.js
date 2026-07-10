@@ -85,6 +85,7 @@
   let currentPageId = 'choose';
   const heroVideo = document.getElementById('hero-video');
   const creatorVideo = document.getElementById('creator-hero-video');
+  const analystVideo = document.getElementById('analyst-video');
 
   window.goToPage = function (persona) {
     switchProfile(persona);
@@ -112,6 +113,12 @@
     if (currentPageId === 'creator' && creatorVideo) {
       creatorVideo.pause();
       creatorVideo.muted = true;
+    }
+
+    // Pause and mute video when navigating AWAY from analyst page
+    if (currentPageId === 'analyst' && analystVideo) {
+      analystVideo.pause();
+      analystVideo.muted = true;
     }
 
     // Animate old page out
@@ -150,6 +157,19 @@
         }
         creatorVideo.currentTime = 0;
         creatorVideo.play().catch(() => {});
+      }
+
+      // Play background video WITH MUSIC when navigating TO analyst page
+      if (persona === 'analyst' && analystVideo) {
+        if (!analystVideo.getAttribute('src')) {
+          analystVideo.setAttribute('src', 'analyst-bg.mp4');
+        }
+        analystVideo.currentTime = 0;
+        analystVideo.muted = false;
+        analystVideo.volume = 0.85;
+        const soundBtn = document.getElementById('analyst-sound-btn');
+        if (soundBtn) soundBtn.innerHTML = '<span>🔊 MUSIC ON</span>';
+        analystVideo.play().catch(() => {});
       }
 
       // Reveal new page
@@ -194,6 +214,25 @@
     creatorVideo.pause();
     creatorVideo.muted = true;
   }
+  if (analystVideo) {
+    analystVideo.pause();
+    analystVideo.muted = true;
+  }
+
+  window.toggleAnalystAudio = function() {
+    const video = document.getElementById('analyst-video');
+    const btn = document.getElementById('analyst-sound-btn');
+    if (!video || !btn) return;
+    if (video.muted) {
+      video.muted = false;
+      video.volume = 0.85;
+      btn.innerHTML = '<span>🔊 MUSIC ON</span>';
+    } else {
+      video.muted = true;
+      btn.innerHTML = '<span>🔇 MUSIC OFF</span>';
+    }
+  };
+
   /* ══════════════════════════════════════════
      RESUME MODAL PREVIEW LOGIC
   ══════════════════════════════════════════ */

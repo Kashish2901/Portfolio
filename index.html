@@ -122,6 +122,17 @@
   <!-- ══════════════════ THE ANALYST PAGE ══════════════════ -->
   <div id="analyst-page" class="persona-page page-hidden">
     
+    <!-- Background Video for The Analyst Page -->
+    <video id="analyst-video" class="analyst-bg-video" loop playsinline>
+      <source src="analyst-bg.mp4" type="video/mp4" />
+    </video>
+    <div class="analyst-video-overlay"></div>
+
+    <!-- Sound Toggle Button -->
+    <button id="analyst-sound-btn" class="analyst-sound-toggle" onclick="toggleAnalystAudio()" aria-label="Toggle Analyst Music">
+      <span>🔊 MUSIC ON</span>
+    </button>
+
     <!-- Top Navbar -->
     <nav class="analyst-top-nav">
       <div class="analyst-brand" onclick="switchProfile('choose')">
@@ -503,21 +514,6 @@
               <button class="case-play-btn" aria-label="View BabyBillion Research"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
             </div>
           </div>
-        </div>
-
-        <!-- 6. Aerchain Growth Strategy -->
-        <div class="case-study-card theme-aerchain">
-          <div class="case-card-bg"></div>
-          <div class="case-card-content">
-            <span class="case-tag">GROWTH STRATEGY</span>
-            <h3 class="case-title">Aerchain Growth Strategy</h3>
-            <p class="case-desc">GTM expansion framework and founder outreach</p>
-            <div class="case-footer">
-              <span class="case-tech">Research &bull; Outreach &bull; GTM</span>
-              <button class="case-play-btn" aria-label="View Aerchain Case Study"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
