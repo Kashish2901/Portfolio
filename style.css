@@ -2188,21 +2188,21 @@ html, body {
 
 .analyst-sound-toggle {
   position: fixed;
-  bottom: 28px;
-  right: 28px;
-  z-index: 9999;
-  background: rgba(18, 20, 28, 0.88);
-  border: 1px solid rgba(229, 9, 20, 0.45);
+  bottom: 30px;
+  right: 30px;
+  z-index: 99999;
+  background: rgba(14, 15, 22, 0.92);
+  border: 2px solid #e50914;
   color: #ffffff;
-  padding: 10px 18px;
+  padding: 11px 22px;
   border-radius: 100px;
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
   cursor: pointer;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(229, 9, 20, 0.2);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 20px rgba(229, 9, 20, 0.4);
   transition: all 0.25s ease;
 }
 
@@ -2210,7 +2210,7 @@ html, body {
   background: #e50914;
   border-color: #e50914;
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(229, 9, 20, 0.5);
+  box-shadow: 0 12px 30px rgba(229, 9, 20, 0.6);
 }
 
 
