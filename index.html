@@ -314,7 +314,7 @@
 
       <div class="case-studies-grid-6">
         <!-- 1. Nykaa -->
-        <div class="case-study-card theme-nykaa">
+        <div class="case-study-card theme-nykaa" onclick="openProjectPdfModal('Nykaa_Marketing_Dashboard.pdf', 'NYKAA MARKETING DASHBOARD')" style="cursor: pointer;">
           <div class="case-card-bg"></div>
           <div class="case-card-content">
             <span class="case-tag">DATA ANALYTICS</span>
@@ -322,7 +322,7 @@
             <p class="case-desc">Marketing performance analysis and ROI dashboard</p>
             <div class="case-footer">
               <span class="case-tech">Power BI &bull; DAX &bull; Power Query</span>
-              <button class="case-play-btn" aria-label="View Nykaa Case Study"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+              <button class="case-play-btn" aria-label="View Nykaa Case Study" onclick="event.stopPropagation(); openProjectPdfModal('Nykaa_Marketing_Dashboard.pdf', 'NYKAA MARKETING DASHBOARD');"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
             </div>
           </div>
         </div>
@@ -342,7 +342,7 @@
         </div>
 
         <!-- 3. CLTV Cohort Analysis -->
-        <div class="case-study-card theme-cltv">
+        <div class="case-study-card theme-cltv" onclick="openProjectPdfModal('CLTV_Cohort_Analysis.pdf', 'CLTV COHORT ANALYSIS')" style="cursor: pointer;">
           <div class="case-card-bg"></div>
           <div class="case-card-content">
             <span class="case-tag">COHORT ANALYTICS</span>
@@ -350,13 +350,13 @@
             <p class="case-desc">Monthly sign-up cohorts and retention analysis model</p>
             <div class="case-footer">
               <span class="case-tech">Excel &bull; Cohort &bull; CLTV</span>
-              <button class="case-play-btn" aria-label="View CLTV Case Study"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+              <button class="case-play-btn" aria-label="View CLTV Case Study" onclick="event.stopPropagation(); openProjectPdfModal('CLTV_Cohort_Analysis.pdf', 'CLTV COHORT ANALYSIS');"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
             </div>
           </div>
         </div>
 
         <!-- 4. Digital Marketing & MIS Spend -->
-        <div class="case-study-card theme-mis">
+        <div class="case-study-card theme-mis" onclick="openProjectPdfModal('Kashish_MIS_Analysis.pdf', 'DIGITAL MARKETING &amp; MIS SPEND ANALYSIS')" style="cursor: pointer;">
           <div class="case-card-bg"></div>
           <div class="case-card-content">
             <span class="case-tag">MARKETING ROI</span>
@@ -364,7 +364,7 @@
             <p class="case-desc">MIS ad-spend conversion speed &amp; channel efficiency</p>
             <div class="case-footer">
               <span class="case-tech">Excel &bull; Pivot &bull; Charts</span>
-              <button class="case-play-btn" aria-label="View MIS Spend Analysis"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+              <button class="case-play-btn" aria-label="View MIS Spend Analysis" onclick="event.stopPropagation(); openProjectPdfModal('Kashish_MIS_Analysis.pdf', 'DIGITAL MARKETING &amp; MIS SPEND ANALYSIS');"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
             </div>
           </div>
         </div>
@@ -1508,6 +1508,31 @@
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ PROJECT PDF VIEWER MODAL ══════════════════ -->
+  <div id="project-pdf-modal" class="resume-modal-overlay hidden">
+    <div class="resume-modal-window" style="max-width: 1150px; height: 88vh;">
+      <!-- Modal Top Bar -->
+      <div class="resume-modal-header">
+        <div class="resume-modal-title">
+          <svg class="analyst-cap-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          <span id="project-pdf-modal-title">PROJECT PREVIEW MODE</span>
+        </div>
+        <div class="resume-modal-actions">
+          <a id="project-pdf-open-tab" href="#" target="_blank" class="resume-btn-secondary">
+            <span>FULL SCREEN TAB</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <button class="resume-modal-close" onclick="closeProjectPdfModal()" aria-label="Close modal">&times;</button>
+        </div>
+      </div>
+
+      <!-- Modal Body (Embedded PDF Viewer) -->
+      <div class="resume-modal-body" style="padding: 0; background: #18181e; flex: 1; display: flex;">
+        <iframe id="project-pdf-frame" src="" style="width: 100%; height: 100%; border: none; background: #1e1e24;" title="Project Report PDF Preview"></iframe>
       </div>
     </div>
   </div>
