@@ -2752,47 +2752,110 @@ html, body {
   color: rgba(255, 255, 255, 0.88);
 }
 
-.cr-impact-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+.cr-achievements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
 }
 
-.cr-impact-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
-  padding: 14px;
+.cr-achievements-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.4;
+}
+
+.cr-star-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid var(--red);
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.cr-impact-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+  padding: 10px 0;
+}
+
+.cr-impact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  position: relative;
+  height: 100%;
+  justify-content: center;
+}
+
+.cr-impact-item:first-child::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 10%;
+  bottom: 10%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.cr-impact-icon {
+  margin-bottom: 10px;
+  color: var(--red);
 }
 
 .cr-impact-val {
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: 32px;
   font-weight: 800;
   color: var(--red);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
 }
 
 .cr-impact-lbl {
-  font-size: 11.5px;
-  color: rgba(255, 255, 255, 0.7);
-  margin-top: 4px;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+.cr-quote-icon {
+  font-size: 48px;
+  color: var(--red);
+  font-weight: 900;
+  line-height: 0.8;
+  margin-bottom: 12px;
 }
 
 .cr-quote-text {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.6;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .cr-quote-author {
-  font-family: 'Georgia', serif;
-  font-style: italic;
-  font-size: 18px;
+  font-family: 'Dancing Script', 'Georgia', cursive;
+  font-size: 26px;
   color: var(--red);
-  margin-top: 12px;
+  margin-top: 16px;
 }
+
 
 /* ── 2-Column Bottom Block ── */
 .cr-two-col-grid {
