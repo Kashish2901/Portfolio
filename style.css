@@ -325,10 +325,13 @@ html, body {
 #choose-page {
   position: fixed;
   inset: 0;
+  width: 100vw;
+  height: 100vh;
   background: #000000;
   overflow: hidden;
   z-index: 15;
-  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ─── Choose Top Bar ─── */
@@ -372,7 +375,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 20px;
+  margin-top: -50px;
 }
 
 .choose-title-new {
