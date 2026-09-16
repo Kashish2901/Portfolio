@@ -1789,6 +1789,10 @@ html, body {
   background: linear-gradient(135deg, #4f46e5, #7c3aed);
 }
 
+.bg-soma {
+  background: linear-gradient(135deg, #14b8a6, #0ea5e9);
+}
+
 .exp-company {
   font-size: 18px;
   font-weight: 700;
